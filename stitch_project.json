@@ -1,0 +1,257 @@
+{
+  "name": "projects/5219321416303187681",
+  "title": "SIH YS",
+  "visibility": "PRIVATE",
+  "createTime": "2026-09-08T17:03:24.015893Z",
+  "updateTime": "2026-09-08T18:53:17.082471Z",
+  "projectType": "TEXT_TO_UI_PRO",
+  "thumbnailScreenshot": {
+    "name": "projects/1077539319220458027/screens/32248b2cbc4a493c8ac05c46c88e6aee/fileEntries/screenshot",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VBemFu5TIKcmEwFO3UrrZbmtfL-DoWpGXckZqpmpQlEa9rNulLfeWT_-Y4Qjdr9p6trl7JUiDcb1K4Sw1zpLYyDYTo-DQBQQOIcxHUlWEpa1o3FosNjIMw2_jp7b6vstEFTDV6XlVRKCANHUwRj60YVwy8vZg-EdHiJPpUSltpTGuZKDjgjXUCmwCL_iB1tdQICSuulGCZ58JLY-lV3tsKgPoKIctd-fIOH0fVuWdHeiRMhg3aw7W2ooI"
+  },
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "font": "PLUS_JAKARTA_SANS",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#4f46e5",
+    "headlineFont": "PLUS_JAKARTA_SANS",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "on_secondary_container": "#00714d",
+      "on_background": "#141b2b",
+      "surface_container_highest": "#dce2f7",
+      "on_error_container": "#93000a",
+      "secondary": "#006c49",
+      "primary_fixed_dim": "#c3c0ff",
+      "on_secondary_fixed": "#002113",
+      "primary_container": "#4f46e5",
+      "secondary_fixed_dim": "#4edea3",
+      "surface_dim": "#d3daef",
+      "tertiary_container": "#885500",
+      "tertiary": "#684000",
+      "tertiary_fixed": "#ffddb8",
+      "on_tertiary_container": "#ffd4a4",
+      "on_primary_fixed_variant": "#3323cc",
+      "surface_container_high": "#e1e8fd",
+      "inverse_on_surface": "#edf0ff",
+      "error_container": "#ffdad6",
+      "primary": "#3525cd",
+      "inverse_surface": "#293040",
+      "surface_container_lowest": "#ffffff",
+      "on_secondary_fixed_variant": "#005236",
+      "surface_container_low": "#f1f3ff",
+      "on_surface_variant": "#464555",
+      "on_secondary": "#ffffff",
+      "background": "#f9f9ff",
+      "surface_variant": "#dce2f7",
+      "on_tertiary_fixed": "#2a1700",
+      "on_primary": "#ffffff",
+      "tertiary_fixed_dim": "#ffb95f",
+      "on_error": "#ffffff",
+      "surface_bright": "#f9f9ff",
+      "outline_variant": "#c7c4d8",
+      "surface_tint": "#4d44e3",
+      "inverse_primary": "#c3c0ff",
+      "on_primary_fixed": "#0f0069",
+      "on_surface": "#141b2b",
+      "on_primary_container": "#dad7ff",
+      "on_tertiary_fixed_variant": "#653e00",
+      "primary_fixed": "#e2dfff",
+      "outline": "#777587",
+      "secondary_container": "#6cf8bb",
+      "surface": "#f9f9ff",
+      "on_tertiary": "#ffffff",
+      "surface_container": "#e9edff",
+      "secondary_fixed": "#6ffbbe",
+      "error": "#ba1a1a"
+    },
+    "designMd": "---\nname: SchemeSetu Sovereign FinTech\ncolors:\n  surface: '#f9f9ff'\n  surface-dim: '#d3daef'\n  surface-bright: '#f9f9ff'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f1f3ff'\n  surface-container: '#e9edff'\n  surface-container-high: '#e1e8fd'\n  surface-container-highest: '#dce2f7'\n  on-surface: '#141b2b'\n  on-surface-variant: '#464555'\n  inverse-surface: '#293040'\n  inverse-on-surface: '#edf0ff'\n  outline: '#777587'\n  outline-variant: '#c7c4d8'\n  surface-tint: '#4d44e3'\n  primary: '#3525cd'\n  on-primary: '#ffffff'\n  primary-container: '#4f46e5'\n  on-primary-container: '#dad7ff'\n  inverse-primary: '#c3c0ff'\n  secondary: '#006c49'\n  on-secondary: '#ffffff'\n  secondary-container: '#6cf8bb'\n  on-secondary-container: '#00714d'\n  tertiary: '#684000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#885500'\n  on-tertiary-container: '#ffd4a4'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e2dfff'\n  primary-fixed-dim: '#c3c0ff'\n  on-primary-fixed: '#0f0069'\n  on-primary-fixed-variant: '#3323cc'\n  secondary-fixed: '#6ffbbe'\n  secondary-fixed-dim: '#4edea3'\n  on-secondary-fixed: '#002113'\n  on-secondary-fixed-variant: '#005236'\n  tertiary-fixed: '#ffddb8'\n  tertiary-fixed-dim: '#ffb95f'\n  on-tertiary-fixed: '#2a1700'\n  on-tertiary-fixed-variant: '#653e00'\n  background: '#f9f9ff'\n  on-background: '#141b2b'\n  surface-variant: '#dce2f7'\ntypography:\n  display-hero:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 48px\n    fontWeight: '800'\n    lineHeight: 56px\n    letterSpacing: -0.03em\n  display-hero-mobile:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 32px\n    fontWeight: '800'\n    lineHeight: 40px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.025em\n  headline-lg-mobile:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 26px\n    fontWeight: '700'\n    lineHeight: 34px\n    letterSpacing: -0.015em\n  headline-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 24px\n    fontWeight: '700'\n    lineHeight: 32px\n    letterSpacing: -0.02em\n  headline-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: -0.01em\n  title-md:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: 26px\n    letterSpacing: -0.01em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  body-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n  body-sm:\n    fontFamily: Inter\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 18px\n  label-lg:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.01em\n  label-md:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-badge:\n    fontFamily: Inter\n    fontSize: 11px\n    fontWeight: '700'\n    lineHeight: 14px\n    letterSpacing: 0.04em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  space-xxs: 0.25rem\n  space-xs: 0.5rem\n  space-sm: 0.75rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2rem\n  space-2xl: 3rem\n  space-3xl: 4rem\n  gutter-mobile: 1rem\n  gutter-desktop: 1.5rem\n  margin-mobile: 1rem\n  margin-desktop: 2rem\n---\n\n## Brand & Style\n\nThis design system establishes a high-trust, empowering civic-fintech interface designed to eliminate the bureaucratic friction standing between marginalized micro-entrepreneurs and sovereign capital. The visual tone balances three distinct influences:\n\n1. **60% Modern Tier-1 FinTech**: Precision engineering, crisp line-work, bento-grid modularity, structured data densities, and responsive performance reminiscent of modern payment platforms.\n2. **30% Sovereign Public Trust**: Official validation indicators, high legibility, uncompromised contrast compliance, institutional seals, and structural solidity drawn from verified public infrastructure.\n3. **10% Futuristic AI Guidance**: Dynamic voice waveform accents, subtle indigo-to-violet energetic backdrops, pulsing interactive states, and proactive AI copilot touchpoints that demystify complex eligibility criteria.\n\nThe emotional target is dignified clarity, institutional reliability, and effortless momentum. Visual elements must communicate transparency and absolute legitimacy without feeling intimidating, paternalistic, or sluggish.\n\n## Colors\n\nThe system uses a calibrated, high-contrast palette calibrated to maintain accessibility standards (WCAG AAA for critical paths, WCAG AA minimum across all micro-copy).\n\n- **Primary (`#4F46E5` / Sovereign Indigo)**: Drives the primary interactive pathway, key actions, active navigation states, and foundational brand presence.\n- **Secondary (`#10B981` / Prosperous Emerald)**: Denotes verified eligibility, loan approvals, positive fiscal balance, subsidized percentages, and complete tasks.\n- **Tertiary (`#F59E0B` / Sovereign Saffron)**: Acts as the national civic accent, reserved for official sovereign scheme seals, pending verifications, priority alerts, and subsidy-grant markers.\n- **Neutral (`#111827` / Dark Slate)**: The foundation for primary headers and data values, counterbalanced by Slate-500 (`#64748B`) for structural metadata.\n- **AI Accent Aura (`#818CF8` to `#C084FC`)**: A secondary spectrum used exclusively for AI-assisted calculations, ambient field fills, voice search orbs, and multilingual prompt hints.\n- **Canvas & Surface**: Application canvas operates on pure off-white (`#FAFAFA`), while actionable modules, cards, and bento tiles exist on crisp white (`#FFFFFF`) framed by precise hairline borders (`#E2E8F0` / `#F1F5F9`).\n\n## Typography\n\nThe type scale integrates two complementary typefaces:\n\n- **Primary Display & Headings (Plus Jakarta Sans)**: Delivers geometric warmth, contemporary fintech energy, and clear structural hierarchy. Used for value metrics, scheme titles, loan limits, and bento-cell headers.\n- **Body, Metadata & Multilingual Labels (Inter)**: Built for high functional legibility at small sizes, tabular financial clarity, and uniform line height rendering across multilingual complex scripts (Devanagari, Telugu, Tamil, and Latin).\n\n### Script & Multilingual Guidance\n1. **Vertical Rhythm**: When rendering Indic scripts (Hindi, Tamil, Telugu), automatically increase line-height by 10-15% across all levels to prevent matra and vowel-sign clipping.\n2. **Tabular Numerals**: Numerical amounts (`\u20b9`, percentages, subsidy rates) must always implement `font-feature-settings: 'tnum' on, 'cv05' on` to align financial totals cleanly down lists and data tables.\n\n## Layout & Spacing\n\nThe design system is structured around an 8px atomic baseline grid, deployed through a fluid Bento-Grid structure.\n\n### Grid Infrastructure\n- **Desktop (1280px+)**: 12-column grid, max content width 1320px, 24px gutters, 32px external page margins.\n- **Tablet (768px - 1279px)**: 8-column grid, dynamic gutters (16px to 24px), 24px margins.\n- **Mobile (360px - 767px)**: 4-column fluid layout, 16px gutters, 16px margins.\n\n### Bento Architecture Rules\n- Scheme discovery displays use modular, rectangular tiles spanning flexible column increments (e.g., 4-col mini-stat, 8-col active loan application, 12-col AI eligibility wizard).\n- Component interior padding remains standardized to `space-lg` (24px) for prominent bento surfaces and `space-md` (16px) for compact utility modules.\n\n## Elevation & Depth\n\nVisual depth is expressed through subtle, diffused atmospheric layers rather than deep skeuomorphic shadows, reinforcing clean fintech precision.\n\n- **Level 0 (Canvas Surface)**: Flat `#FAFAFA`, no shadow.\n- **Level 1 (Bento Cards & Base Containers)**: `#FFFFFF` paired with an ultra-fine border (`1px solid #F1F5F9`) and a soft ambient drop: `0px 1px 3px rgba(15, 23, 42, 0.04), 0px 6px 16px -4px rgba(15, 23, 42, 0.02)`.\n- **Level 2 (Hover States, Dropdowns & Interactive Tiles)**: Elevated card state: `0px 4px 6px -1px rgba(15, 23, 42, 0.05), 0px 10px 24px -5px rgba(79, 70, 229, 0.08)`, border transition to `#E2E8F0`.\n- **Level 3 (Modals, Action Sheets & Sovereign Drawers)**: High-order overlay depth: `0px 20px 32px -8px rgba(15, 23, 42, 0.12), 0px 1px 2px rgba(15, 23, 42, 0.06)`.\n- **AI Ambient Glow (Copilot Focus)**: Radial luminance anchored to AI prompts and active voice listening units: `0px 0px 32px 0px rgba(99, 102, 241, 0.15), 0px 4px 16px 0px rgba(192, 132, 252, 0.10)`.\n\n## Shapes\n\nThe design system employs a generous rounded design language (`roundedness: 2`, with outer bento cards scaling between 20px to 24px), balancing friendly consumer accessibility with crisp algorithmic efficiency.\n\n- **Bento Modules & Major Surfaces**: 24px (`rounded-3xl` / 1.5rem) corner curvature, creating distinct, touch-friendly content zones.\n- **Interactive Controls (Inputs, Action Buttons)**: 12px (`rounded-xl` / 0.75rem) to ensure clear input differentiation from container walls.\n- **Badges, Pills & Multilingual Tags**: Full pill styling (`rounded-full` / 9999px) for sovereign verification tags and status indicators.\n- **Touch Targets**: Minimum hit radius of 48px across all mobile breakpoints to accommodate grassroots users navigating one-handed or via low-cost mobile hardware.\n\n## Components\n\n### Buttons\n- **Primary CTA**: `#4F46E5` background, pure white text, 12px rounded corner, 48px height (`px-6`), font-weight 600. Resting shadow level 1, transitioning to Level 2 on hover with a micro-scale of 1.01x.\n- **Secondary CTA**: Pure white background, `1px solid #E2E8F0`, `#111827` text.\n- **Sovereign Action Button**: Tinted Emerald `#10B981` background, `#FFFFFF` text, utilized strictly for final loan submissions and DBT (Direct Benefit Transfer) validations.\n- **AI Copilot Voice Trigger**: 48px circular pill or icon-button hosting a pulsing Indigo-Violet gradient (`#4F46E5` to `#7C3AED`) with dynamic concentric audio ripple indicators.\n\n### Bilingual / Multilingual Badges\n- **Scheme Taxonomy Badge**: Pill-shaped container (`px-3 py-1`) with soft structural tinting. Text reflects `Language 1 / Language 2` (e.g., `English / \u0939\u093f\u0928\u094d\u0926\u0940` or `English / \u0ba4\u0bae\u0bbf\u0bb4\u0bcd`).\n- **Official Government Badge**: High-contrast, sovereign validation badge (`#FFFBEB` background, `#B45309` border and text) paired with the Ashoka Chakra/Sovereign checkmark emblem.\n\n### Form Inputs & Assistance Fields\n- **Standard Inputs**: Crisp `#FFFFFF` surface with `#E2E8F0` border, 48px height, 12px radius, and dark slate value typing. Focus ring: `2px solid #4F46E5` with `4px #EEF2FF` outer ring.\n- **Audio-Assisted Inputs**: Inputs feature an inline microphone glyph enabling local-dialect transcription, indicating AI parsing status via a subtle purple pulsing border.\n\n### Bento Cards & Scheme Listings\n- Bento containers present clear modular telemetry: Top-left scheme emblem + Sovereign verification badge; Top-right maximum loan limit (e.g., `\u20b950,00,000` in tabular bold display font); Center body detailing collateral-free terms and subsidy margins; Bottom pinned action bar with primary eligibility check button and multilingual toggle.\n\n### Selection Controls (Checkboxes & Radios)\n- **Checkboxes**: 20px squares, 6px radius, bordered with `#CBD5E1`. Checked state fills `#4F46E5` with a crisp white check vector.\n- **Eligibility Toggle Cards**: Radio selections wrapped as interactive mini-bento cards: active options receive a `#EEF2FF` background fill and `#4F46E5` 2px perimeter border.",
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#4f46e5",
+    "overrideSecondaryColor": "#10b981",
+    "overrideTertiaryColor": "#f59e0b",
+    "overrideNeutralColor": "#111827",
+    "typography": {
+      "headline-md": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "lineHeight": "32px",
+        "letterSpacing": "-0.02em"
+      },
+      "headline-sm": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "lineHeight": "28px",
+        "letterSpacing": "-0.01em"
+      },
+      "label-md": {
+        "fontFamily": "Inter",
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "lineHeight": "16px",
+        "letterSpacing": "0.02em"
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px"
+      },
+      "title-md": {
+        "fontFamily": "Inter",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "lineHeight": "26px",
+        "letterSpacing": "-0.01em"
+      },
+      "display-hero-mobile": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "lineHeight": "40px",
+        "letterSpacing": "-0.02em"
+      },
+      "display-hero": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "48px",
+        "fontWeight": "800",
+        "lineHeight": "56px",
+        "letterSpacing": "-0.03em"
+      },
+      "headline-lg": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "36px",
+        "fontWeight": "700",
+        "lineHeight": "44px",
+        "letterSpacing": "-0.025em"
+      },
+      "headline-lg-mobile": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "26px",
+        "fontWeight": "700",
+        "lineHeight": "34px",
+        "letterSpacing": "-0.015em"
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "18px"
+      },
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "20px"
+      },
+      "label-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "lineHeight": "20px",
+        "letterSpacing": "0.01em"
+      },
+      "label-badge": {
+        "fontFamily": "Inter",
+        "fontSize": "11px",
+        "fontWeight": "700",
+        "lineHeight": "14px",
+        "letterSpacing": "0.04em"
+      }
+    },
+    "spacing": {
+      "space-md": "1rem",
+      "gutter-mobile": "1rem",
+      "space-sm": "0.75rem",
+      "space-xs": "0.5rem",
+      "space-lg": "1.5rem",
+      "margin-desktop": "2rem",
+      "space-xxs": "0.25rem",
+      "margin-mobile": "1rem",
+      "space-xl": "2rem",
+      "space-3xl": "4rem",
+      "gutter-desktop": "1.5rem",
+      "space-2xl": "3rem"
+    },
+    "headlineFontFamily": "Plus Jakarta Sans",
+    "bodyFontFamily": "Inter",
+    "labelFontFamily": "Inter"
+  },
+  "screenInstances": [
+    {
+      "id": "2ab12ead24304c29bc87ae71b43196e1",
+      "sourceScreen": "projects/5219321416303187681/screens/2ab12ead24304c29bc87ae71b43196e1",
+      "y": 6084,
+      "width": 1280,
+      "height": 3746
+    },
+    {
+      "id": "32248b2cbc4a493c8ac05c46c88e6aee",
+      "sourceScreen": "projects/5219321416303187681/screens/32248b2cbc4a493c8ac05c46c88e6aee",
+      "x": 1024,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "327acb301c0549838af7b0b2c1919e72",
+      "sourceScreen": "projects/5219321416303187681/screens/c45e5f83e2a0460a82d218d3439b79d9",
+      "x": 1904,
+      "width": 1280,
+      "height": 3746
+    },
+    {
+      "id": "97e55d5cbb094f288df831247e6cc5ca",
+      "sourceScreen": "projects/5219321416303187681/screens/97e55d5cbb094f288df831247e6cc5ca",
+      "x": 1600,
+      "width": 240,
+      "height": 64
+    },
+    {
+      "id": "assets-12343877342979605620-1788890142712",
+      "x": 4608,
+      "width": 960,
+      "height": 540,
+      "sourceAsset": "assets/12343877342979605620",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "assets_70f38f09a0da4217b0b0ba0e5ae58fc0",
+      "width": 960,
+      "height": 540,
+      "sourceAsset": "assets/70f38f09a0da4217b0b0ba0e5ae58fc0",
+      "type": "DESIGN_SYSTEM_INSTANCE"
+    },
+    {
+      "id": "bd7a9ce2938945da861d2e23831264d4",
+      "sourceScreen": "projects/5219321416303187681/screens/bd7a9ce2938945da861d2e23831264d4",
+      "x": 3248,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "d6eca2cb-1c23-4021-a7ec-de3e2973eee5",
+      "sourceScreen": "projects/5219321416303187681/screens/4651795880425297401",
+      "y": 4036,
+      "width": 512,
+      "height": 512,
+      "type": "SCREEN_INSTANCE"
+    },
+    {
+      "id": "f148f48e837e40e189fe65c8c911fddd",
+      "sourceScreen": "projects/5219321416303187681/screens/f148f48e837e40e189fe65c8c911fddd",
+      "x": 1344,
+      "y": 6084,
+      "width": 1280,
+      "height": 3746
+    }
+  ],
+  "metadata": {
+    "userRole": "OWNER",
+    "isRemixed": true
+  }
+}

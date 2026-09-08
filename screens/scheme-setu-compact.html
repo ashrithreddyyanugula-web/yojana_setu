@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#2a1700", "on-primary-fixed": "#0f0069", "surface-container-low": "#f1f3ff", "surface": "#f9f9ff", "tertiary-fixed-dim": "#ffb95f", "error": "#ba1a1a", "on-primary": "#ffffff", "primary-container": "#4f46e5", "tertiary": "#684000", "outline-variant": "#c7c4d8", "on-secondary-fixed-variant": "#005236", "surface-container-highest": "#dce2f7", "surface-tint": "#4d44e3", "primary-fixed-dim": "#c3c0ff", "tertiary-container": "#885500", "inverse-on-surface": "#edf0ff", "outline": "#777587", "on-background": "#141b2b", "secondary-fixed-dim": "#4edea3", "on-primary-fixed-variant": "#3323cc", "surface-bright": "#f9f9ff", "on-secondary": "#ffffff", "on-secondary-container": "#00714d", "on-tertiary-fixed-variant": "#653e00", "on-error": "#ffffff", "surface-container-high": "#e1e8fd", "background": "#f9f9ff", "secondary": "#006c49", "on-primary-container": "#dad7ff", "on-secondary-fixed": "#002113", "inverse-surface": "#293040", "surface-container": "#e9edff", "on-surface": "#141b2b", "secondary-container": "#6cf8bb", "error-container": "#ffdad6", "surface-variant": "#dce2f7", "primary-fixed": "#e2dfff", "tertiary-fixed": "#ffddb8", "on-tertiary-container": "#ffd4a4", "surface-container-lowest": "#ffffff", "inverse-primary": "#c3c0ff", "secondary-fixed": "#6ffbbe", "on-error-container": "#93000a", "primary": "#3525cd", "on-tertiary": "#ffffff", "surface-dim": "#d3daef", "on-surface-variant": "#464555" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-2xl": "3rem", "space-md": "1rem", "space-xxs": "0.25rem", "space-lg": "1.5rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "margin-mobile": "1rem", "space-3xl": "4rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "display-hero-mobile": [ "Plus Jakarta Sans" ], "display-hero": [ "Plus Jakarta Sans" ], "title-md": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-lg": [ "Inter" ], "label-badge": [ "Inter" ], "label-lg": [ "Inter" ], "body-md": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ] }, "fontSize": { "display-hero-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "title-md": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-badge": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full bg-surface-container-high"><div class="max-w-[1320px] mx-auto px-margin-desktop py-space-xxs flex items-center justify-between font-label-badge text-label-badge"><div class="flex items-center gap-space-sm"><span class="flex h-1.5 w-1.5 rounded-full bg-secondary"></span><span class="text-on-surface">Jan-Samarth &amp; DBT Integrated • 100% Direct Benefit Subsidy Guarantee</span></div><div class="flex items-center gap-space-md"><span class="text-on-surface-variant">Sovereign Digital Infrastructure</span><div class="flex items-center gap-0.5 h-2"><div class="w-3 h-1.5 bg-tertiary-fixed-dim rounded-sm"></div><div class="w-3 h-1.5 bg-surface-container-lowest rounded-sm"></div><div class="w-3 h-1.5 bg-secondary rounded-sm"></div></div></div></div></div><div class="h-20 max-w-[1320px] mx-auto px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><img alt="SchemeSetu Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vf2NUf7mpTc-ZuT0JgyjYHsE-VQnH0-QMzB3-VNBP6EUIZtMnsJS_MDNIAa-63wffkDSCCGI7Q90hiCgrq05livPsTlTu5mefdCZGsxf_alPnD9jK0JNf0XACzUizSoJsRKFceVSzyj-hiDHQOgZsd5AR_hdRsKXVra4jaxrEopE2rUYJMwfygkshXHWaQaM1U6U2Bzw2psvYmQ5aFQg1V-I7T4jW6EqfpHb9MF56cFSM11akGKzYoTw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">SchemeSetu</span><span class="mt-1 px-space-xs py-0.5 rounded-full bg-surface-container font-label-badge text-label-badge text-primary-container inline-block">National Financial Inclusion Portal</span></div></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="schemes-and-eligibility" href="#">Schemes &amp; Eligibility</a><a class="px-space-sm py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-saathi-copilot" href="#">AI Saathi Copilot</a><a class="px-space-sm py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="partner-gis-locator" href="#">Partner GIS Locator</a><a class="px-space-sm py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="document-intelligence" href="#">Document Intelligence</a><a class="px-space-sm py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="application-journey" href="#">Application Journey</a><a class="px-space-sm py-space-xs rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="success-stories" href="#">Success Stories</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">translate</span><span>English / हिन्दी</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all" type="button"><span class="material-symbols-outlined text-[18px]">mic</span><span class="hidden sm:inline">Bolkar Poochhein</span></button><div class="hidden lg:flex items-center gap-space-xxs bg-surface-container p-0.5 rounded-lg"><button class="p-space-xxs rounded hover:bg-surface-container-highest text-on-surface font-label-md text-label-md" title="Standard Font" type="button">A</button><button class="p-space-xxs rounded hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold" title="Increase Font" type="button">A+</button><button class="p-space-xxs rounded hover:bg-surface-container-highest text-on-surface" title="High Contrast" type="button"><span class="material-symbols-outlined text-[16px]">contrast</span></button></div><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRq2b4oOR9azlkAPNhewlVVDB3uZWVoDVSvmR3idxo59WNIijdrTqXDvUtEWsrFlMIDGNeK3Fe-ugSy_UKC1jW8PdkoWWsFQfIwyqP8blpbX2VEPkzW0r2uZCwXOCeNb45brWoyZKp6lFIEWVtX7bUTtiws1ds1dSIRKbHFJdhOKq0d6FeqMa-IYGp_aBp1mBbWBS0NKs0o2nJgJzeoKapQ_cQQIygnLxeOcwgtcKHxDIqVjg2hJFP"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Sunita Devi</span><span class="font-label-badge text-label-badge text-secondary flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">verified</span>Udyam Reg. Verified</span></div></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Sovereign Ambient Ribbon & Ticker -->
+<section class="w-full bg-surface-container-high py-space-xs px-margin-desktop">
+<div class="max-w-[1320px] mx-auto flex flex-wrap items-center justify-between gap-space-sm font-label-badge text-label-badge text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-secondary text-on-secondary font-label-badge">LIVE DBT 2025</span>
+<span class="text-on-surface font-semibold">Special Window:</span>
+<span>Additional 5% Women Capital Subsidy under PMEGP active across 114 Aspirational Districts.</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1 text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span> 256-bit Sovereign Encryption
+        </span>
+<span>UIDAI &amp; JanSamarth Synchronized</span>
+</div>
+</div>
+</section>
+<!-- SECTION 1: HERO HUB (Modern Sovereign FinTech x AI Copilot) -->
+<section class="relative w-full overflow-hidden bg-surface-container-low py-space-3xl px-margin-desktop">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute -top-24 -left-20 w-96 h-96 bg-primary-fixed-dim/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-[30rem] h-[30rem] bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-[1320px] mx-auto flex flex-col items-center text-center relative z-10">
+<!-- High-Trust Institutional Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-lowest shadow-sm mb-space-lg">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-primary font-bold">MoMSME &amp; SIDBI Recognized Gateway</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">22 Scheduled Languages Ready</span>
+</div>
+<!-- Hero Headline with Scale & Gradient Emphasis -->
+<h1 class="font-display-hero text-display-hero text-on-surface max-w-5xl tracking-tight">
+        Find the Right Government Scheme in Minutes
+      </h1>
+<p class="font-headline-md text-headline-md mt-space-sm max-w-3xl font-semibold bg-gradient-to-r from-primary to-surface-tint bg-clip-text text-transparent">
+        AI-Powered Multilingual Platform Connecting Entrepreneurs with Government-Backed Financial Opportunities.
+      </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-md">
+        Zero middlemen. Verified institutional subsidies. Instant Jan-Samarth linkage for street vendors, artisans, micro-manufacturers, and rural women leaders.
+      </p>
+<!-- Sovereign Metric Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm w-full max-w-4xl mt-space-xl">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-left flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-headline-sm text-headline-sm font-bold">₹4,250 Cr+</span>
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant mt-1">Capital Facilitated</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-left flex flex-col justify-between">
+<div class="flex items-center justify-between text-primary">
+<span class="font-headline-sm text-headline-sm font-bold">98.4%</span>
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant mt-1">Eligibility Accuracy</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-left flex flex-col justify-between">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-headline-sm text-headline-sm font-bold">22</span>
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant mt-1">Bhashini Dialects</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-left flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-headline-sm text-headline-sm font-bold">0%</span>
+<span class="material-symbols-outlined text-[20px]">handshake</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant mt-1">Intermediary Cost</span>
+</div>
+</div>
+<!-- Action Nexus -->
+<div class="flex flex-col sm:flex-row items-center gap-space-md mt-space-2xl w-full justify-center max-w-xl">
+<button class="w-full sm:w-auto flex items-center justify-center gap-space-sm px-space-lg py-space-md bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg shadow-md hover:bg-primary transition-all group" id="hero-ai-search-btn">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed animate-spin" style="animation-duration: 4s;">auto_awesome</span>
+<span>Find My Scheme (AI Match)</span>
+<kbd class="hidden md:inline-block px-1.5 py-0.5 rounded bg-on-primary/20 font-label-badge text-label-badge text-on-primary">Ctrl + K</kbd>
+</button>
+<button class="w-full sm:w-auto flex items-center justify-center gap-space-sm px-space-lg py-space-md bg-surface-container-lowest text-on-surface rounded-xl font-label-lg text-label-lg shadow-sm hover:bg-surface-container-high transition-all" id="voice-trigger-btn">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">mic</span>
+<span>Bolkar Khojein (Voice)</span>
+</button>
+</div>
+<!-- Sovereign Filter Pills -->
+<div class="flex flex-wrap items-center justify-center gap-space-xs mt-space-lg">
+<span class="font-label-badge text-label-badge text-on-surface-variant mr-1">Trending Direct Portals:</span>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-primary-fixed transition-colors">PM Mudra Yojana</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-primary-fixed transition-colors">PMEGP Subsidy</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-primary-fixed transition-colors">Stand-Up India</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-primary-fixed transition-colors">PM SVANidhi</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-primary-fixed transition-colors">PM Vishwakarma Toolkit</button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: THE CORE BENTO GRID DASHBOARD -->
+<section class="max-w-[1320px] mx-auto w-full px-margin-desktop py-space-2xl">
+<!-- Section Subheading Context -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs font-label-badge text-label-badge text-primary uppercase tracking-widest font-bold">
+<span class="material-symbols-outlined text-[16px]">dashboard</span>
+          Integrated Beneficiary Console
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Smart Capital &amp; Eligibility Suite</h2>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container p-1 rounded-lg">
+<button class="px-space-sm py-1 rounded-md bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm font-semibold">Self-Employed / MSME</button>
+<button class="px-space-sm py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface">Artisan / Vishwakarma</button>
+<button class="px-space-sm py-1 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface">SHG &amp; Rural Co-op</button>
+</div>
+</div>
+<!-- The Master Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-start">
+<!-- CARD 1: Setu Saathi AI Copilot (Span 7 Cols Desktop) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed/20 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<!-- Top Header & Language Toggle -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-title-md text-title-md text-on-surface">Setu Saathi Copilot</h3>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-badge text-label-badge">Online</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sovereign LLM trained on 450+ Gazette Guidelines</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high p-1 rounded-lg font-label-badge text-label-badge text-on-surface-variant">
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold shadow-xs">EN</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container">हिन्दी</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container">తెలుగు</button>
+<button class="px-2 py-0.5 rounded hover:bg-surface-container">தமிழ்</button>
+</div>
+</div>
+<!-- Suggested Prompts -->
+<div class="flex flex-wrap gap-space-xs py-space-sm">
+<button class="prompt-chip px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors text-left flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">store</span>
+              "Tailoring boutique in Tier-2 city under ₹10L"
+            </button>
+<button class="prompt-chip px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors text-left flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">agriculture</span>
+              "Organic grocery store ₹5 Lakhs working capital"
+            </button>
+<button class="prompt-chip px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors text-left flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">female</span>
+              "SC/ST woman entrepreneur special subsidy"
+            </button>
+<button class="prompt-chip px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors text-left flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-container">shield</span>
+              "Collateral-free loan under CGTMSE?"
+            </button>
+</div>
+<!-- Live Dynamic Copilot Response Box -->
+<div class="bg-surface-container p-space-md rounded-xl mt-space-xs">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">insights</span> Real-Time AI Synthesis
+              </span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge font-bold">
+                98% Eligibility Match
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed" id="chat-output">
+              Based on your Udyam profile (Micro - Apparel, Varanasi), you are prime-eligible for the <strong class="text-primary font-semibold">PMEGP Manufacturing Subsidy</strong>. You qualify for an upfront 35% non-repayable capital subsidy (up to ₹17.5L on a ₹50L project) through KVIC with 0 secondary collateral under CGTMSE.
+            </p>
+<div class="flex items-center gap-space-md mt-space-sm pt-space-xs bg-surface-container-lowest/70 p-space-xs rounded-lg">
+<div class="flex items-center gap-1 font-label-badge text-label-badge text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> JanSamarth Auto-Route Ready
+              </div>
+<div class="flex items-center gap-1 font-label-badge text-label-badge text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">timer</span> Processing: ~7 Days
+              </div>
+</div>
+</div>
+</div>
+<!-- Input Bar with Live Audio Visualizer Animation -->
+<div class="mt-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-xl shadow-xs">
+<!-- Simulated Sound Waves -->
+<div class="hidden sm:flex items-center gap-0.5 px-space-xs">
+<span class="w-1 h-3 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.1s"></span>
+<span class="w-1 h-5 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.3s"></span>
+<span class="w-1 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+<span class="w-1 h-6 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.4s"></span>
+</div>
+<input class="w-full bg-transparent px-space-xs py-space-xs font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none" id="chat-input-field" placeholder="Apne business ya zaroorat ke baare mein likhein ya bolein..." type="text" value="I want to start a tailoring &amp; boutique business in Varanasi"/>
+<button class="p-space-xs bg-primary text-on-primary rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center" id="send-query-btn">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+<button class="p-space-xs bg-secondary-container text-on-secondary-container rounded-lg hover:bg-secondary-fixed transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CARD 2: Prime Recommended Scheme Card (Span 5 Cols Desktop) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<!-- Badging Row -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px]">stars</span> Top Recommendation
+            </span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge font-bold">
+              98% High Match
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">
+            Prime Minister Employment Generation Programme (PMEGP)
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Administered by Khadi and Village Industries Commission (KVIC) &amp; Ministry of MSME.
+          </p>
+<!-- Core Metric Blocks Grid -->
+<div class="grid grid-cols-2 gap-space-xs mt-space-md">
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Max Loan Ceil</span>
+<p class="font-title-md text-title-md text-primary font-bold">₹50,00,000</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Govt Subsidy</span>
+<p class="font-title-md text-title-md text-secondary font-bold">Up to 35%</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Collateral Req.</span>
+<p class="font-title-md text-title-md text-on-surface font-bold">NIL (CGTMSE)</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Effective Rate</span>
+<p class="font-title-md text-title-md text-on-surface font-bold">8.15% p.a.</p>
+</div>
+</div>
+<div class="mt-space-md p-space-xs rounded bg-surface-container-high flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span class="font-label-badge text-label-badge text-on-surface font-medium">Eligible for special Special Rural Women Margin Money Benefit</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-lg">
+<button class="w-full py-space-sm bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-on-secondary-container transition-all flex items-center justify-center gap-space-xs font-semibold">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>One-Click Jan-Samarth Apply</span>
+</button>
+<button class="w-full py-space-xs bg-surface-container text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+            View Official Gazette Guidelines (PDF)
+          </button>
+</div>
+</div>
+<!-- CARD 3: AI Eligibility & Approval Probability Gauge (Span 4 Cols) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Sanction Readiness</span>
+<span class="material-symbols-outlined text-[18px] text-primary">assessment</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Sovereign Sanction Score</h4>
+<!-- Circular SVG Radial Gauge -->
+<div class="flex items-center justify-center my-space-md">
+<div class="relative w-40 h-40 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 120 120">
+<circle class="text-surface-container" cx="60" cy="60" fill="none" r="48" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary-container" cx="60" cy="60" fill="none" r="48" stroke="currentColor" stroke-dasharray="301.59" stroke-dashoffset="33.17" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-headline-lg text-headline-lg font-extrabold text-on-surface">89%</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">Prime Eligible</span>
+</div>
+</div>
+</div>
+<!-- Component Readiness Meters -->
+<div class="flex flex-col gap-space-xs">
+<div>
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mb-0.5">
+<span>Aadhaar &amp; KYC Verification</span>
+<span class="text-secondary font-bold">100% ✓</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-full"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mb-0.5">
+<span>CIBIL / Experian Health</span>
+<span class="text-on-surface font-semibold">760 / 900</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[84%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mb-0.5">
+<span>Business Model Feasibility</span>
+<span class="text-primary font-bold">92%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-[92%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container rounded-lg">
+<p class="font-label-md text-label-md text-on-surface font-medium">
+<span class="text-secondary font-bold">91% Probability</span> of instant nod at State Bank of India &amp; Canara Bank nodal desks.
+          </p>
+</div>
+</div>
+<!-- CARD 4: Dynamic EMI & Upfront Subsidy Calculator (Span 8 Cols) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div>
+<span class="font-label-badge text-label-badge text-primary uppercase font-bold tracking-wider">Subsidized Financing Simulator</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">EMI &amp; Capital Subsidy Deductor</h4>
+</div>
+<span class="px-space-sm py-1 bg-surface-container-high rounded-full font-label-badge text-label-badge text-on-surface-variant">
+              DBT Scheme Formula 2024-25
+            </span>
+</div>
+<!-- Slider Controls -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<!-- Loan Amount Slider -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Loan Capital Required</span>
+<span class="font-title-md text-title-md text-primary font-bold" id="loan-amt-val">₹10,00,000</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg appearance-none cursor-pointer" id="loan-range" max="5000000" min="50000" step="50000" type="range" value="1000000"/>
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mt-1">
+<span>₹50,000</span>
+<span>₹25,00,000</span>
+<span>₹50,00,000</span>
+</div>
+</div>
+<!-- Interest Rate Slider -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Concessional Rate of Interest</span>
+<span class="font-title-md text-title-md text-on-surface font-bold" id="rate-val">8.25% p.a.</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg appearance-none cursor-pointer" id="rate-range" max="13.0" min="7.0" step="0.25" type="range" value="8.25"/>
+<div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mt-1">
+<span>7.0%</span>
+<span>10.0%</span>
+<span>13.0%</span>
+</div>
+</div>
+<!-- Tenure Buttons -->
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant block mb-1">Repayment Tenure</span>
+<div class="grid grid-cols-4 gap-space-xs" id="tenure-container">
+<button class="py-1 rounded border-none bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" data-years="1">1 Yr</button>
+<button class="py-1 rounded border-none bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" data-years="3">3 Yrs</button>
+<button class="py-1 rounded border-none bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-xs" data-years="5">5 Yrs</button>
+<button class="py-1 rounded border-none bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" data-years="7">7 Yrs</button>
+</div>
+</div>
+</div>
+<!-- Calculated Output Card Panel -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Estimated Monthly Payment</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-display-hero text-headline-lg text-primary font-extrabold" id="emi-result">₹20,396</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ month</span>
+</div>
+<!-- Upfront Govt Subsidy Highlight -->
+<div class="mt-space-md p-space-sm rounded-lg bg-secondary-container/40">
+<div class="flex items-center gap-1 text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-badge text-label-badge uppercase font-bold">Government Non-Repayable Subsidy</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-secondary font-extrabold mt-0.5" id="subsidy-deduction">
+                    -₹3,50,000 Upfront Grant
+                  </p>
+<p class="font-body-sm text-body-sm text-on-secondary-container/80 mt-1">
+                    Directly deposited into your Bank Escrow via DBT after sanction.
+                  </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-md text-left font-label-md text-label-md">
+<div>
+<span class="text-on-surface-variant block">Net Principal Burden:</span>
+<span class="font-semibold text-on-surface" id="net-principal">₹6,50,000</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">Total Subsidy Savings:</span>
+<span class="font-semibold text-secondary" id="subsidy-percent-text">35% of Total</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-md text-on-surface-variant font-label-badge text-label-badge">
+<span>*Calculations assume PMEGP General/Special category rural enterprise slab norms.</span>
+<a class="text-primary hover:underline font-semibold" href="#">Download Amortization Table</a>
+</div>
+</div>
+<!-- CARD 5: Document Intelligence & OCR Verification Hub (Span 5 Cols) -->
+<div class="md:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">DigiLocker Sovereign Sync</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high font-label-badge text-label-badge text-on-surface">3/4 Validated</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Document Readiness &amp; Extraction</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Automated OCR cross-validates with GSTN &amp; UIDAI systems.</p>
+<div class="flex flex-col gap-space-xs mt-space-md">
+<!-- Aadhaar Card Verified -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Aadhaar Card (UIDAI)</p>
+<p class="font-label-badge text-label-badge text-on-surface-variant">•••• •••• 8912 • Biometric Verified</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<!-- PAN & Udyam Verified -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">PAN &amp; Udyam Registration</p>
+<p class="font-label-badge text-label-badge text-on-surface-variant">UDYAM-UP-70-002910 • Active</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<!-- Bank Statement Verified -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">6-Month Bank Statement</p>
+<p class="font-label-badge text-label-badge text-on-surface-variant">SBI Current A/c • Cashflow healthy</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<!-- Missing Special Category Alert -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-high">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">warning</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Category Certificate (Optional)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Upload SC/ST or Special OBC certificate to claim additional 10% subsidy bonus.</p>
+<button class="mt-1 font-label-badge text-label-badge text-primary font-bold hover:underline flex items-center gap-0.5">
+                  Fetch from DigiLocker <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-secondary font-bold">85% Ready for Instant Sanction</span>
+<button class="px-space-sm py-1 rounded bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+            Upload Document
+          </button>
+</div>
+</div>
+<!-- CARD 6: Nearby Channel Partner GIS Locator & Map Card (Span 7 Cols) -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-badge text-label-badge text-secondary uppercase font-bold tracking-wider">Designated Nodal Network</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Authorized Banking &amp; CSC Partners Nearby</h4>
+</div>
+<span class="flex items-center gap-1 font-label-badge text-label-badge text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 8 Centers Active
+            </span>
+</div>
+<!-- Stylized GIS Geo-Location Banner -->
+<div class="w-full h-44 bg-cover bg-center rounded-lg shadow-inner relative overflow-hidden flex items-end p-space-sm" data-location="Varanasi, Uttar Pradesh, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHl2rx4JNkVi-9dkRNy8a-seqcSwzsKMnT5O71EirBdLbj-RQdHrT0nUisPuOmcwuepc3H4g6QxX9mlEyBd93ltGSCw8lYxF7kWwrf1mdP8U8etQdXRoy18V9yePtu8FNjPwFXxPuqpvweNdqinlAnGZ2ZJEg4GonrRqvdwiNrzxZg3WgAWQRHdAP128md1Yao38i3k99hnDOT65L90BApuugiLiiPyLPQmyJr_v2GC1kuh0Icnmff');">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/30 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full text-inverse-on-surface">
+<div>
+<span class="font-label-badge text-label-badge bg-primary px-space-xs py-0.5 rounded text-on-primary">GPS Geofence</span>
+<p class="font-label-md text-label-md font-semibold mt-0.5">District Lead Bank Desks • Varanasi Cantt Hub</p>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest/90 text-on-surface font-label-badge text-label-badge font-bold shadow hover:bg-surface-container-lowest">
+                Expand Map
+              </button>
+</div>
+</div>
+<!-- Listed Partner Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs mt-space-md">
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<p class="font-label-md text-label-md text-on-surface font-bold">State Bank of India</p>
+<span class="font-label-badge text-label-badge text-secondary font-bold">1.2 km</span>
+</div>
+<p class="font-label-badge text-label-badge text-on-surface-variant">Specialized MSME Branch • Cantt</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Nodal Officer: Rajiv Sharma (Direct Desk)</p>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<button class="px-space-xs py-0.5 bg-primary text-on-primary rounded font-label-badge text-label-badge hover:bg-primary-container">Book Slot</button>
+<button class="px-space-xs py-0.5 bg-surface-container-high text-on-surface rounded font-label-badge text-label-badge">Directions</button>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<p class="font-label-md text-label-md text-on-surface font-bold">Baroda UP Bank (RRB)</p>
+<span class="font-label-badge text-label-badge text-secondary font-bold">2.8 km</span>
+</div>
+<p class="font-label-badge text-label-badge text-on-surface-variant">Priority Desk for Women Entr.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Direct Mudra Facilitator On-site</p>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<button class="px-space-xs py-0.5 bg-primary text-on-primary rounded font-label-badge text-label-badge hover:bg-primary-container">Book Slot</button>
+<button class="px-space-xs py-0.5 bg-surface-container-high text-on-surface rounded font-label-badge text-label-badge">Directions</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-badge text-label-badge text-on-surface-variant">
+<span>NABARD District Development Desk located at Vikas Bhawan (4.5 km)</span>
+<span class="text-secondary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">call</span> 1800-SETU-AI
+          </span>
+</div>
+</div>
+<!-- CARD 7: Real-Time Application Journey Stepper (Span 12 Cols Full Width) -->
+<div class="md:col-span-12 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs pb-space-md">
+<div>
+<span class="font-label-badge text-label-badge text-primary uppercase font-bold tracking-wider">Live Pipeline Telemetry</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Application Tracker: Ref #SCH-2025-UP-9812</h4>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge font-bold">
+              Status: Stage 3 Active
+            </span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Est. Sanction: 4 Days</span>
+</div>
+</div>
+<!-- Horizontal Interactive Journey Pipeline -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-space-sm mt-space-sm relative">
+<!-- Step 1 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-secondary font-bold">STEP 01</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold">AI Eligibility Match</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Profile scored against 450+ central schemes.</p>
+</div>
+<span class="mt-space-sm text-secondary font-label-badge text-label-badge font-semibold">Completed ✓</span>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-secondary font-bold">STEP 02</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold">OCR Doc Verification</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">UIDAI &amp; Udyam auto-authenticated.</p>
+</div>
+<span class="mt-space-sm text-secondary font-label-badge text-label-badge font-semibold">Completed ✓</span>
+</div>
+<!-- Step 3 -->
+<div class="bg-primary-container text-on-primary p-space-sm rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-primary-fixed font-bold">STEP 03 (IN PROGRESS)</span>
+<span class="material-symbols-outlined text-primary-fixed text-[18px] animate-spin">sync</span>
+</div>
+<p class="font-label-md text-label-md text-on-primary font-bold">Jan-Samarth Submission</p>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-0.5">Dossier routed to SBI Special MSME Branch.</p>
+</div>
+<span class="mt-space-sm text-on-primary font-label-badge text-label-badge font-semibold">Transmission Ready</span>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between opacity-80">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant font-bold">STEP 04</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">schedule</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Credit Sanction</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Field appraisal &amp; sanction letter release.</p>
+</div>
+<span class="mt-space-sm text-on-surface-variant font-label-badge text-label-badge">Pending Action</span>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between opacity-80">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant font-bold">STEP 05</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">currency_rupee</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold">DBT Subsidy Deposit</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Upfront 35% margin credit directly into escrow.</p>
+</div>
+<span class="mt-space-sm text-on-surface-variant font-label-badge text-label-badge">Escrow Queue</span>
+</div>
+</div>
+</div>
+<!-- CARD 8: AI Financial Coach & Business Advisor (Span 6 Cols) -->
+<div class="md:col-span-6 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs font-label-badge text-label-badge text-primary uppercase font-bold">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+            AI Financial Copilot &amp; Advisory
+          </div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold mt-1">Smart Cashflow Optimization</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Personalized guidance based on Varanasi Textile &amp; Apparel Cluster metrics.</p>
+<div class="flex flex-col gap-space-sm mt-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">trending_up</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Working Capital Buffer Tip</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maintain at least 45 days of raw fabric inventory reserve to avoid festival surge supply shortages in Q3.</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">receipt_long</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">GST Exemption Advisory</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">As an intra-state goods supplier with turnover under ₹40 Lakhs, mandatory GST registration is optional, saving ₹28,000/yr in compliance fees.</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">psychology</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Peer Benchmark Insight</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Boutique businesses upgrading with computerized embroidery machinery report a 42% margin enhancement within 120 days.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Updated today based on Ministry bulletins</span>
+<button class="text-primary font-label-md text-label-md font-semibold hover:underline flex items-center gap-1">
+            Ask Financial Coach <span class="material-symbols-outlined text-[16px]">north_east</span>
+</button>
+</div>
+</div>
+<!-- CARD 9: Real Beneficiary Impact Story (Span 6 Cols) -->
+<div class="md:col-span-6 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge text-secondary uppercase font-bold tracking-wider">Ground Impact Case Study</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-badge text-label-badge">Verified DBT Beneficiary</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Varanasi Handloom to Boutique Enterprise</h4>
+<div class="flex flex-col sm:flex-row gap-space-md mt-space-md items-center">
+<img class="w-full sm:w-36 h-36 rounded-xl object-cover shadow-sm shrink-0" data-alt="A confident smiling South Asian woman entrepreneur in Varanasi wearing a vibrant handwoven saree standing proudly inside her modern textile boutique and tailoring studio surrounded by fabric bolts and modern sewing equipment with soft golden morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP5eOe4kfAV4GyQW7WsX8Jv0Z9pMi6HHjv7O6iLTeCt-GJIqxsXtl3RWjLVTUqfjQvzZXuHtC4sBg-0S9kZugqrs9c1zX5HG8nz8A3p8NDvSe1hDA1GAOy4sc6lTLeHF52X0ojVY9bpVirzJkc3ZmXdZ7WTKyjXTAU0zdXTC3APPRpCzvUP6-y-IInFpl-CKiWPHUkVm6y2NA5DcMA_F8cYKUzmPiDBWgT3fOToKk1YQcfR16w83Fh"/>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">Radha Devi</p>
+<p class="font-label-md text-label-md text-primary font-semibold">Radha Handloom Creations, Varanasi (UP)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 italic">
+                "Without SchemeSetu, I spent 6 months visiting multiple bank desks with zero progress. Using the AI Saathi voice tool, I secured a ₹10 Lakh PMEGP loan with a 35% capital subsidy within 18 days. My revenue grew 240% and I now employ 7 local women."
+              </p>
+</div>
+</div>
+<!-- Impact Metrics -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-md">
+<div class="bg-surface-container p-space-xs rounded text-center">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Loan Sanctioned</span>
+<p class="font-label-lg text-label-lg text-primary font-bold">₹10 Lakhs</p>
+</div>
+<div class="bg-surface-container p-space-xs rounded text-center">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Direct Subsidy</span>
+<p class="font-label-lg text-label-lg text-secondary font-bold">₹3.5 Lakhs</p>
+</div>
+<div class="bg-surface-container p-space-xs rounded text-center">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Local Jobs Created</span>
+<p class="font-label-lg text-label-lg text-on-surface font-bold">7 Full-Time</p>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant">Read 1,400+ Verified Case Studies</span>
+<button class="px-space-sm py-1 bg-surface-container-high rounded text-on-surface font-label-md text-label-md hover:bg-surface-container hover:text-primary transition-colors">
+            View All Testimonials
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- High-Trust Institutional Security Guarantee Strip -->
+<section class="w-full bg-surface-container-high py-space-xl px-margin-desktop mt-space-xl">
+<div class="max-w-[1320px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Direct Benefit Transfer Guarantee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            No bank or intermediary is authorized to demand processing commissions. Report any grievance directly to CPGRAMS via SchemeSetu.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest font-label-md text-label-md text-secondary font-bold shadow-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span> Zero-Bribe Certified
+        </span>
+<button class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors">
+          File Nodal Grievance
+        </button>
+</div>
+</div>
+</section>
+<!-- Client-side Micro-Interactions Script -->
+<script>
+    // 1. Dynamic Loan, EMI & Subsidy Calculator Logic
+    const loanRange = document.getElementById('loan-range');
+    const rateRange = document.getElementById('rate-range');
+    const tenureButtons = document.querySelectorAll('#tenure-container button');
+    const loanAmtVal = document.getElementById('loan-amt-val');
+    const rateVal = document.getElementById('rate-val');
+    const emiResult = document.getElementById('emi-result');
+    const subsidyDeduction = document.getElementById('subsidy-deduction');
+    const netPrincipal = document.getElementById('net-principal');
+
+    let currentTenureYears = 5;
+
+    function formatINR(val) {
+      return '₹' + Math.round(val).toLocaleString('en-IN');
+    }
+
+    function recalculateLoan() {
+      if (!loanRange || !rateRange) return;
+      const P = parseFloat(loanRange.value);
+      const rAnnual = parseFloat(rateRange.value);
+      const N = currentTenureYears * 12;
+      const r = (rAnnual / 12) / 100;
+
+      // Display Labels
+      loanAmtVal.textContent = formatINR(P);
+      rateVal.textContent = rAnnual.toFixed(2) + '% p.a.';
+
+      // Subsidy calculation: 35% standard for rural PMEGP micro project
+      const subsidy = P * 0.35;
+      subsidyDeduction.textContent = '-' + formatINR(subsidy) + ' Upfront Grant';
+      netPrincipal.textContent = formatINR(P - subsidy);
+
+      // EMI calculation on gross loan prior to escrow subsidy release
+      const emi = (P * r * Math.pow(1 + r, N)) / (Math.pow(1 + r, N) - 1);
+      if (isFinite(emi)) {
+        emiResult.textContent = formatINR(emi);
+      }
+    }
+
+    if (loanRange && rateRange) {
+      loanRange.addEventListener('input', recalculateLoan);
+      rateRange.addEventListener('input', recalculateLoan);
+
+      tenureButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tenureButtons.forEach(b => {
+            b.className = 'py-1 rounded border-none bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors';
+          });
+          btn.className = 'py-1 rounded border-none bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-xs';
+          currentTenureYears = parseInt(btn.getAttribute('data-years'), 10);
+          recalculateLoan();
+        });
+      });
+      recalculateLoan();
+    }
+
+    // 2. Setu Saathi AI Prompt Pills Click Interactions
+    const promptChips = document.querySelectorAll('.prompt-chip');
+    const chatInput = document.getElementById('chat-input-field');
+    const chatOutput = document.getElementById('chat-output');
+    const sendBtn = document.getElementById('send-query-btn');
+
+    const responses = {
+      tailoring: "Based on your Udyam profile (Micro - Apparel, Varanasi), you are prime-eligible for the PMEGP Manufacturing Subsidy. You qualify for an upfront 35% non-repayable capital subsidy (up to ₹17.5L on a ₹50L project) through KVIC with 0 secondary collateral under CGTMSE.",
+      grocery: "For an Organic Grocery store requiring ₹5 Lakhs working capital, the PM Mudra (Kishore Category) provides sanction up to ₹5,00,000 at concessional interest of ~8.2% without requiring collateral or third-party guarantee. Fast-tracked within 48 hours at RRBs.",
+      women: "Under the Special Women Entrepreneur Category of Stand-Up India and PMEGP, you qualify for 35% margin subsidy in rural areas and 25% in urban centers, alongside a 3% interest subvention rebate on prompt repayment.",
+      cgtmse: "Yes! Under CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises), eligible loans up to ₹200 Lakhs are 100% guarantee-backed by the Government of India, legally prohibiting lenders from asking for third-party collateral."
+    };
+
+    promptChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const text = chip.textContent.trim().replace(/"/g, '');
+        if (chatInput) chatInput.value = text;
+        
+        // Show simulated loading state
+        if (chatOutput) {
+          chatOutput.textContent = "Setu Saathi is analyzing central and state databases...";
+          setTimeout(() => {
+            if (text.includes("tailoring") || text.includes("boutique")) {
+              chatOutput.textContent = responses.tailoring;
+            } else if (text.includes("grocery") || text.includes("working capital")) {
+              chatOutput.textContent = responses.grocery;
+            } else if (text.includes("woman") || text.includes("SC/ST")) {
+              chatOutput.textContent = responses.women;
+            } else {
+              chatOutput.textContent = responses.cgtmse;
+            }
+          }, 450);
+        }
+      });
+    });
+
+    if (sendBtn && chatInput && chatOutput) {
+      sendBtn.addEventListener('click', () => {
+        const val = chatInput.value;
+        if (!val) return;
+        chatOutput.textContent = "Setu Saathi is analyzing central and state databases...";
+        setTimeout(() => {
+          chatOutput.textContent = "Synthesized Match for: '" + val + "' — You meet 96% criteria for Mudra Tarun and PMEGP State Subvention. Bank desks in Varanasi Cantt are alerted.";
+        }, 500);
+      });
+    }
+
+    // 3. Hero voice button trigger micro-interaction
+    const voiceBtn = document.getElementById('voice-trigger-btn');
+    if (voiceBtn) {
+      voiceBtn.addEventListener('click', () => {
+        alert("Bolkar Khojein Active: Please speak your business need in Hindi, Telugu, Tamil, or English...");
+      });
+    }
+
+    // 4. Keyboard Shortcut [Ctrl + K]
+    document.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        const heroInput = document.getElementById('chat-input-field');
+        if (heroInput) {
+          heroInput.focus();
+          heroInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-3xl pt-space-2xl pb-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1320px] mx-auto px-margin-desktop"><div class="flex flex-wrap items-center justify-between gap-space-lg pb-space-xl"><div class="flex flex-col gap-space-xxs"><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Sovereign Ecosystem &amp; Financial Delivery Partners</span><div class="flex flex-wrap items-center gap-space-md mt-space-xs"><span class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">MSME Ministry</span><span class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">SIDBI</span><span class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">NABARD</span><span class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">NPCI</span><span class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">Digital India</span></div></div><div class="flex items-center gap-space-md bg-surface-container-lowest px-space-lg py-space-sm rounded-xl shadow-sm"><div class="flex h-10 w-10 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container"><span class="material-symbols-outlined">support_agent</span></div><div><p class="font-label-badge text-label-badge text-on-surface-variant uppercase">Toll-Free Sovereign AI Helpline</p><p class="font-title-md text-title-md text-secondary">1800-SETU-AI</p></div></div></div><div class="grid grid-cols-2 md:grid-cols-4 gap-space-xl py-space-xl"><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Central Credit Schemes</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">PM SVANidhi Microcredit</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">PMEGP Capital Subsidy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Mudra Shishu &amp; Kishore</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Stand-Up India Facility</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Verification &amp; Assist</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Udyam Aadhaar Cross-Check</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">DigiLocker Direct Fetch</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">JanSamarth Sync Status</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">AI Voice Transcriptions</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Network &amp; Access</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">CSC Center Locator</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Lead Bank District Nodal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Regional Rural Bank Desks</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Grievance Redressal Portal</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Governance &amp; Policy</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">DBT Guidelines 2024</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Data Privacy Compliance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Accessibility Statement</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">National Informatics Centre</a></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><p>© 2025 SchemeSetu Sovereign Financial Platform. Designed under the National Financial Inclusion Charter, Government of India.</p><p class="font-label-badge text-label-badge text-on-surface-variant">Zero-Bribery Guarantee • End-to-End Encrypted Sovereign Portal</p></div></div></footer></body></html>
