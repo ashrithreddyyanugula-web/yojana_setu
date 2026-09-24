@@ -288,34 +288,125 @@ router.post("/", async (req, res) => {
     }
 
     try {
-        console.log("Setu Saathi: Using local scheme matcher — no AI API required.");
-        const profile = suppliedProfile !== undefined
-            ? suppliedProfile
-            : mergeProfile({}, extractDeterministicProfile(message, conversation));
-        const missingFields = getMissingFields(profile);
-        let schemes = [];
+        const gemini = getGeminiClient();
 
-        try {
-            const matchSchemes = await getMatcher();
-            schemes = matchSchemes(profile);
-            console.log("[SETU COPILOT] Matched schemes:", schemes);
-        } catch (error) {
-            console.error("========== SETU COPILOT ERROR ==========");
-            console.error(error);
-            console.error("Setu Saathi matcher failed:", error);
-            return res.status(500).json({ error: "Unable to match schemes for this profile" });
+        let profile = suppliedProfile
+            ? { ...suppliedProfile }
+            : {};
+
+        // Local extraction provides a reliable fallback
+        const deterministicProfile = extractDeterministicProfile(
+            message,
+            conversation
+        );
+
+        profile = mergeProfile(
+            profile,
+            deterministicProfile
+        );
+
+        let intent = "scheme_search";
+
+        // Gemini understands natural language
+        if (gemini) {
+            try {
+                const extracted = await extractProfile(
+                    gemini,
+                    message,
+                    profile,
+                    language,
+                    conversation
+                );
+
+                profile = mergeProfile(
+                    profile,
+                    extracted?.profile || {}
+                );
+
+                intent = extracted?.intent || intent;
+
+            } catch (geminiError) {
+                console.error(
+                    "[SETU COPILOT] Gemini profile extraction failed:",
+                    geminiError
+                );
+            }
         }
 
+        const missingFields = getMissingFields(profile);
+
+        let schemes = [];
+
+        // Your existing deterministic matcher
+        try {
+            const matchSchemes = await getMatcher();
+
+            schemes = matchSchemes(profile);
+
+            console.log(
+                "[SETU COPILOT] Matched schemes:",
+                schemes
+            );
+
+        } catch (error) {
+            console.error(
+                "Setu Saathi matcher failed:",
+                error
+            );
+
+            return res.status(500).json({
+                error: "Unable to match schemes for this profile"
+            });
+        }
+
+        // Gemini explains the verified matcher results
+        if (gemini) {
+            try {
+                const reply = await createReply(gemini, {
+                    message,
+                    profile,
+                    schemes,
+                    missingFields,
+                    language
+                });
+
+                return res.json({
+                    reply,
+                    profile,
+                    schemes,
+                    missingFields,
+                    intent
+                });
+
+            } catch (geminiError) {
+                console.error(
+                    "[SETU COPILOT] Gemini reply failed:",
+                    geminiError
+                );
+            }
+        }
+
+        // Fallback if Gemini is unavailable
         return res.json({
-            reply: createLocalReply(schemes, missingFields),
+            reply: createLocalReply(
+                schemes,
+                missingFields
+            ),
             profile,
             schemes,
             missingFields,
-            intent: "scheme_search",
+            intent
         });
+
     } catch (error) {
-        console.error("Setu Saathi Gemini error:", error);
-        return res.status(502).json({ error: "Setu Saathi could not process the request" });
+        console.error(
+            "Setu Saathi error:",
+            error
+        );
+
+        return res.status(502).json({
+            error: "Setu Saathi could not process the request"
+        });
     }
 });
 

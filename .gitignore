@@ -9,3 +9,5 @@ backend/.env.*
 backend/atlas-credentials.env
 server/.env
 server/.env.*
+.vercel
+.env*
