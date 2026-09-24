@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap"
+  rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+  rel="stylesheet" />
+<style>
+  @layer base {
+    overscroll-behavior: none;
+  }
+
+  main> :first-child {
+    margin-top: 0 !important;
+  }
+
+  main> :last-child {
+    margin-bottom: 0 !important;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 35s linear infinite;
+  }
+
+  .ticker-track:hover {
+    animation-play-state: paused;
+  }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script
+  id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary-fixed": "#002114", "on-primary-fixed": "#021a40", "surface-container-low": "#f2f3ff", surface: "#faf8ff", "tertiary-fixed-dim": "#68dba9", error: "#ba1a1a", "on-primary": "#ffffff", "primary-container": "#0f254b", tertiary: "#00160c", "outline-variant": "#c5c6cf", "on-secondary-fixed-variant": "#7f2b00", "surface-container-highest": "#dae2fd", "surface-tint": "#4b5e87", "primary-fixed-dim": "#b3c6f5", "tertiary-container": "#002d1d", "inverse-on-surface": "#eef0ff", outline: "#75777f", "on-background": "#131b2e", "secondary-fixed-dim": "#ffb599", "on-primary-fixed-variant": "#33466e", "surface-bright": "#faf8ff", "on-secondary": "#ffffff", "on-secondary-container": "#571a00", "on-tertiary-fixed-variant": "#005137", "on-error": "#ffffff", "surface-container-high": "#e2e7ff", background: "#faf8ff", secondary: "#a73a00", "on-primary-container": "#7a8db9", "on-secondary-fixed": "#370e00", "inverse-surface": "#283044", "surface-container": "#eaedff", "on-surface": "#131b2e", "secondary-container": "#fd651e", "error-container": "#ffdad6", "surface-variant": "#dae2fd", "primary-fixed": "#d8e2ff", "tertiary-fixed": "#85f8c4", "on-tertiary-container": "#1fa072", "surface-container-lowest": "#ffffff", "inverse-primary": "#b3c6f5", "secondary-fixed": "#ffdbce", "on-error-container": "#93000a", primary: "#00102e", "on-tertiary": "#ffffff", "surface-dim": "#d2d9f4", "on-surface-variant": "#44474e" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { "gutter-mobile": "1rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-2xl": "3rem", "space-md": "1rem", "space-xxs": "0.25rem", "space-lg": "1.5rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "margin-mobile": "1rem", "space-3xl": "4rem", "gutter-desktop": "1.5rem" }, fontFamily: { "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "title-md": ["Inter"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-badge": ["Inter"], "label-lg": ["Inter"], "body-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"] }, fontSize: { "display-hero-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }], "display-hero": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "800" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.025em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-badge": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "700" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased" data-mode="connect">
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="w-full bg-surface-container-high border-b border-outline-variant/30 overflow-hidden">
+      <div
+        class="max-w-[1320px] mx-auto px-margin-desktop py-space-xxs flex items-center justify-between font-label-badge text-label-badge gap-space-md">
+        <div class="flex items-center gap-space-xs shrink-0 z-10 bg-surface-container-high pr-space-xs"><span
+            class="relative flex h-2 w-2"><span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span
+              class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span
+            class="px-1.5 py-0.5 rounded bg-secondary-container/30 text-secondary uppercase font-bold tracking-wider text-[10px] leading-tight">PROTOTYPE
+            PREVIEW</span></div>
+        <div class="relative overflow-hidden flex-1 min-w-0 mx-space-xs">
+          <div class="ticker-track flex items-center gap-space-lg text-on-surface whitespace-nowrap cursor-default">
+            <div class="flex items-center gap-space-lg"><span class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-secondary">campaign</span><strong
+                  class="font-bold text-primary">Scheme update preview:</strong> Verify current PMEGP terms through the
+                official source</span><span class="text-outline-variant">•</span><span
+                class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-primary">hub</span><strong
+                  class="font-bold text-primary">Prototype Preview:</strong> Official application guidance is not
+                connected
+                to government or bank systems</span><span class="text-outline-variant">•</span><span
+                class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-secondary">trending_up</span><strong
+                  class="font-bold text-primary">PM SVANidhi guidance:</strong> Verify current terms for urban street
+                vendors</span><span class="text-outline-variant">•</span><span class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-primary">verified</span><strong
+                  class="font-bold text-primary">Category guidance:</strong> Requirements depend on the selected scheme
+                and official review</span><span class="text-outline-variant">•</span><span
+                class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-secondary">account_balance</span><strong
+                  class="font-bold text-primary">DBT Direct Benefit Transfer:</strong> Direct application guidance for
+                scheme-linked benefit processes</span><span class="text-outline-variant">•</span>
+            </div>
+            <div class="flex items-center gap-space-lg"><span class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-secondary">campaign</span><strong
+                  class="font-bold text-primary">Scheme update preview:</strong> Verify current PMEGP terms through the
+                official source</span><span class="text-outline-variant">•</span><span
+                class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-primary">hub</span><strong
+                  class="font-bold text-primary">Prototype Preview:</strong> Official application guidance is not
+                connected
+                to government or bank systems</span><span class="text-outline-variant">•</span><span
+                class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-secondary">trending_up</span><strong
+                  class="font-bold text-primary">PM SVANidhi guidance:</strong> Verify current terms for urban street
+                vendors</span><span class="text-outline-variant">•</span><span class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-primary">verified</span><strong
+                  class="font-bold text-primary">Category guidance:</strong> Requirements depend on the selected scheme
+                and official review</span><span class="text-outline-variant">•</span><span
+                class="flex items-center gap-1.5"><span
+                  class="material-symbols-outlined text-[14px] text-secondary">account_balance</span><strong
+                  class="font-bold text-primary">DBT Direct Benefit Transfer:</strong> Direct application guidance for
+                scheme-linked benefit processes</span><span class="text-outline-variant">•</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-md shrink-0 z-10 bg-surface-container-high pl-space-xs">
+          <div class="flex items-center gap-0.5 h-2">
+            <div class="w-3 h-1.5 bg-secondary rounded-sm"></div>
+            <div class="w-3 h-1.5 bg-surface-container-lowest rounded-sm"></div>
+            <div class="w-3 h-1.5 bg-tertiary-fixed-dim rounded-sm"></div>
+          </div>
+          <div class="flex items-center gap-space-xxs bg-surface-container-lowest/70 px-1 py-0.5 rounded shadow-xs">
+            <button
+              class="px-1 rounded hover:bg-surface-container-high text-on-surface font-label-badge text-label-badge leading-none"
+              title="Standard Font" type="button">A-</button><button
+              class="px-1 rounded hover:bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold leading-none"
+              title="Increase Font" type="button">A+</button><button
+              class="px-0.5 rounded hover:bg-surface-container-high text-on-surface flex items-center justify-center leading-none"
+              title="High Contrast" type="button"><span
+                class="material-symbols-outlined text-[14px]">contrast</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-20 max-w-[1320px] mx-auto px-margin-desktop flex items-center justify-between gap-space-md relative">
+      <div class="flex items-center shrink-0">
+        <div class="relative group shrink-0"><button
+            class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all border-none shadow-xs"
+            id="nav-column-toggle" type="button"><span
+              class="material-symbols-outlined text-[20px] text-primary">menu_open</span><span
+              class="font-semibold">Menu</span><span
+              class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-badge text-label-badge">7</span><span
+              class="material-symbols-outlined text-[18px] text-on-surface-variant">expand_more</span></button>
+          <nav
+            class="hidden group-hover:flex flex-col absolute top-full left-0 mt-2 w-80 bg-surface-container-lowest rounded-2xl shadow-md p-space-sm gap-space-xxs z-50"
+            data-active-classes="bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm">
+            <div class="px-space-sm py-space-xs mb-1 flex items-center justify-between border-none"><span
+                class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider font-bold">Navigation
+                Column</span><span class="font-label-badge text-label-badge text-secondary font-semibold">Direct
+                Access</span></div><a aria-current="page"
+              class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm transition-all"
+              data-path="home" href="#"><span class="material-symbols-outlined text-[20px]">home</span>
+              <div class="flex flex-col text-left"><span class="font-semibold leading-tight">Home</span><span
+                  class="text-[12px] opacity-80 font-normal">Sovereign Dashboard &amp; Hub</span></div>
+            </a><a
+              class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container-high transition-colors"
+              data-path="schemes-and-eligibility" href="#"><span
+                class="material-symbols-outlined text-[20px] text-primary">account_balance</span>
+              <div class="flex flex-col text-left"><span class="font-semibold text-label-lg leading-tight">Schemes &amp;
+                  Eligibility</span><span class="text-[12px] text-on-surface-variant">Government Schemes</span></div>
+            </a><a
+              class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container-high transition-colors"
+              data-path="ai-saathi-copilot" href="#"><span
+                class="material-symbols-outlined text-[20px] text-primary">smart_toy</span>
+              <div class="flex flex-col text-left"><span class="font-semibold text-label-lg leading-tight">AI Saathi
+                  Copilot</span><span class="text-[12px] text-on-surface-variant">Multilingual Conversational
+                  Guidance</span></div>
+            </a><a
+              class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container-high transition-colors"
+              data-path="document-intelligence" href="#"><span
+                class="material-symbols-outlined text-[20px] text-primary-container">document_scanner</span>
+              <div class="flex flex-col text-left"><span class="font-semibold text-label-lg leading-tight">Document
+                  Intelligence</span><span class="text-[12px] text-on-surface-variant">DigiLocker &amp; OCR
+                  Verification</span></div>
+            </a><a
+              class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface hover:bg-surface-container-high transition-colors"
+              data-path="application-journey" href="#"><span
+                class="material-symbols-outlined text-[20px] text-secondary">timeline</span>
+              <div class="flex flex-col text-left"><span class="font-semibold text-label-lg leading-tight">Application
+                  Journey</span><span class="text-[12px] text-on-surface-variant">Application Journey Preview &amp;
+                  Tracker</span></div>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="absolute left-0 right-0 mx-auto w-max flex items-center gap-space-md pointer-events-none"><img
+          alt="Yojana Setu Official Logo" class="w-auto object-contain h-20 pointer-events-auto filter drop-shadow-sm"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmm3FI2RLnf_pNS47E4sKjxIrUFlrMcrxI23UwxU7TEV3w2J1saeOOL48Fcx6vCiiLHiNeftxf1wYd33f4927tmNhaSiVrZXrUR5qXsqcWmrnxycnzzC8BmH8fpPQ520i99VjXFTJQLIbtxm7OzY-2pRCvSgeAqMoZArIRQY9wlxeZQnEdf5SQ8lLpU5j497o24t0vpaXzUEsDMbkoKW6_hLLqMAvxzP9DHfxFVZr_wO0aDqmUUWgx4aQan0hXt2zKCQ" />
+        <div class="flex flex-col text-left pointer-events-auto"><span
+            class="text-[28px] tracking-tight text-on-surface font-extrabold leading-tight">Yojana <span class=""
+              style="color: rgb(249, 115, 22);">Setu</span></span><span
+            class="mt-1 px-space-sm py-1 rounded-full bg-surface-container font-label-md text-[14px] text-primary-container font-semibold inline-block tracking-wide">National
+            Financial Inclusion Portal</span></div>
+      </div>
+      <div class="flex items-center gap-space-sm shrink-0"><button id="language-menu-button" aria-expanded="false"
+          class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors"
+          type="button"><span class="material-symbols-outlined text-[18px]">translate</span><span class="">English /
+            हिन्दी</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><button
+          class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary-container transition-all"
+          id="login-trigger-btn" type="button"
+          onclick="window.parent.postMessage({ type: 'open-auth', mode: 'login' }, '*')">Log in</button><button
+          class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:bg-secondary-container transition-all"
+          id="signup-trigger-btn" type="button"
+          onclick="window.parent.postMessage({ type: 'open-auth', mode: 'signup' }, '*')">Sign up</button>
+        <div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile"
+            class="w-8 h-8 rounded-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRq2b4oOR9azlkAPNhewlVVDB3uZWVoDVSvmR3idxo59WNIijdrTqXDvUtEWsrFlMIDGNeK3Fe-ugSy_UKC1jW8PdkoWWsFQfIwyqP8blpbX2VEPkzW0r2uZCwXOCeNb45brWoyZKp6lFIEWVtX7bUTtiws1ds1dSIRKbHFJdhOKq0d6FeqMa-IYGp_aBp1mBbWBS0NKs0o2nJgJzeoKapQ_cQQIygnLxeOcwgtcKHxDIqVjg2hJFP" />
+          <div class="hidden 2xl:flex flex-col text-left"><span
+              class="font-label-md text-label-md text-on-surface leading-tight">Sunita Devi</span><span
+              class="font-label-badge text-label-badge text-secondary flex items-center gap-0.5"><span
+                class="material-symbols-outlined text-[12px]">person</span>Profile</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-surface min-h-screen">
+    <div class="flex flex-col w-full">
+      <!-- Top Sovereign Ambient Ribbon & Ticker -->
+      <!-- SECTION 1: HERO HUB (Modern Sovereign FinTech x AI Copilot) -->
+      <section class="relative w-full overflow-hidden bg-surface-container-low py-space-3xl px-margin-desktop">
+        <!-- Atmospheric Ambient Glows -->
+        <div
+          class="absolute -top-24 -left-20 w-96 h-96 bg-primary-fixed-dim/40 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div
+          class="absolute top-1/2 -right-32 w-[30rem] h-[30rem] bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div class="max-w-[1320px] mx-auto flex flex-col items-center text-center relative z-10">
+          <!-- High-Trust Institutional Pill -->
+          <div
+            class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-lowest shadow-sm mb-space-lg">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            <span class="font-label-badge text-label-badge uppercase tracking-wider text-primary font-bold">Government
+              Scheme Guidance</span>
+            <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+            <span class="font-label-badge text-label-badge text-on-surface-variant">Multi-language support</span>
+          </div>
+          <!-- Hero Headline with Scale & Gradient Emphasis -->
+          <h1 class="font-display-hero text-display-hero text-on-surface max-w-5xl tracking-tight">
+            Find the Right Government Scheme in Minutes
+          </h1>
+          <p
+            class="font-headline-md text-headline-md mt-space-sm max-w-3xl font-semibold bg-gradient-to-r from-primary to-surface-tint bg-clip-text text-transparent">
+            AI-Powered Multilingual Platform Connecting Entrepreneurs with Government-Backed Financial Opportunities.
+          </p>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-md">
+            Access scheme guidance, application support, and eligibility information for government programmes.
+          </p>
+          <!-- Sovereign Metric Strip -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm w-full max-w-4xl mt-space-xl">
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-left flex flex-col justify-between">
+              <div class="flex items-center justify-between text-secondary">
+                <span class="font-headline-sm text-headline-sm font-bold">Scheme</span>
+                <span class="material-symbols-outlined text-[20px]">account_balance</span>
+              </div>
+              <span class="font-label-md text-label-md text-on-surface-variant mt-1">Benefits &amp; Loan Guidance</span>
+            </div>
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-left flex flex-col justify-between">
+              <div class="flex items-center justify-between text-primary">
+                <span class="font-headline-sm text-headline-sm font-bold">AI</span>
+                <span class="material-symbols-outlined text-[20px]">verified</span>
+              </div>
+              <span class="font-label-md text-label-md text-on-surface-variant mt-1">Scheme Matching</span>
+            </div>
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-left flex flex-col justify-between">
+              <div class="flex items-center justify-between text-tertiary">
+                <span class="font-headline-sm text-headline-sm font-bold">Multi</span>
+                <span class="material-symbols-outlined text-[20px]">translate</span>
+              </div>
+              <span class="font-label-md text-label-md text-on-surface-variant mt-1">Language Support</span>
+            </div>
+            <div
+              class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-left flex flex-col justify-between">
+              <div class="flex items-center justify-between text-secondary">
+                <span class="font-headline-sm text-headline-sm font-bold">Guidance</span>
+                <span class="material-symbols-outlined text-[20px]">handshake</span>
+              </div>
+              <span class="font-label-md text-label-md text-on-surface-variant mt-1">Application Support</span>
+            </div>
+          </div>
+          <!-- Action Nexus -->
+          <div class="flex flex-col sm:flex-row items-center gap-space-md mt-space-2xl w-full justify-center max-w-xl">
+            <button
+              class="w-full sm:w-auto flex items-center justify-center gap-space-sm px-space-lg py-space-md bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg shadow-md hover:bg-primary transition-all group"
+              id="hero-ai-search-btn" data-ai-trigger>
+              <span class="material-symbols-outlined text-[20px] text-primary-fixed animate-spin"
+                style="animation-duration: 4s;">auto_awesome</span>
+              <span class="">Find My Scheme (AI Match)</span>
+              <kbd
+                class="hidden md:inline-block px-1.5 py-0.5 rounded bg-on-primary/20 font-label-badge text-label-badge text-on-primary">Ctrl
+                + K</kbd>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 2: THE CORE BENTO GRID DASHBOARD -->
+      <section class="max-w-[1320px] mx-auto w-full px-margin-desktop py-space-2xl">
+        <!-- Section Subheading Context -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+          <div>
+            <div
+              class="flex items-center gap-space-xs font-label-badge text-label-badge text-primary uppercase tracking-widest font-bold">
+              <span class="material-symbols-outlined text-[16px]">dashboard</span>
+              Scheme Guidance Console
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Smart Capital &amp; Eligibility Suite
+            </h2>
+          </div>
+          <div class="flex items-center gap-space-sm bg-surface-container p-1 rounded-lg">
+            <button id="category-msme" type="button" aria-selected="true"
+              class="category-tab px-space-sm py-1 rounded-md bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm font-semibold">Self-Employed
+              / MSME</button>
+            <button id="category-artisan" type="button" aria-selected="false"
+              class="category-tab px-space-sm py-1 rounded-md bg-surface-container-high font-label-md text-label-md text-on-surface-variant hover:text-on-surface">Artisan
+              / Vishwakarma</button>
+            <button id="category-shg" type="button" aria-selected="false"
+              class="category-tab px-space-sm py-1 rounded-md bg-surface-container-high font-label-md text-label-md text-on-surface-variant hover:text-on-surface">SHG
+              &amp; Rural Co-op</button>
+          </div>
+        </div>
+        <!-- The Master Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-start">
+          <!-- CARD 1: Setu Saathi AI Copilot (Span 7 Cols Desktop) -->
+          <div
+            class="md:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed/20 rounded-full blur-2xl pointer-events-none">
+            </div>
+            <div>
+              <!-- Top Header & Language Toggle -->
+              <div class="flex items-center justify-between pb-space-sm">
+                <div class="flex items-center gap-space-sm">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+                    <span class="material-symbols-outlined text-[22px]">smart_toy</span>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <h3 id="copilot-title" class="font-title-md text-title-md text-on-surface">Setu Saathi Copilot
+                      </h3>
+                      <span
+                        class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-badge text-label-badge">Online</span>
+                    </div>
+                    <p id="copilot-subtitle" class="font-body-sm text-body-sm text-on-surface-variant">AI-powered scheme
+                      guidance using
+                      available public scheme information</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-1 bg-surface-container-high p-1 rounded-lg font-label-badge text-label-badge text-on-surface-variant">
+                  <button data-language="en"
+                    class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-bold shadow-xs">EN</button>
+                  <button data-language="hi" class="px-2 py-0.5 rounded hover:bg-surface-container">हिन्दी</button>
+                  <button data-language="te" class="px-2 py-0.5 rounded hover:bg-surface-container">తెలుగు</button>
+                  <button data-language="ta" class="px-2 py-0.5 rounded hover:bg-surface-container">தமிழ்</button>
+                </div>
+              </div>
+              <!-- Suggested Prompts -->
+              <div class="flex flex-wrap gap-space-xs py-space-sm">
+                <button
+                  class="prompt-chip px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors text-left flex items-center gap-1"
+                  data-prompt-category="msme">
+                  <span class="material-symbols-outlined text-[16px] text-primary">store</span>
+                  "Tailoring business loan"
+                </button>
+                <button
+                  class="prompt-chip px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors text-left flex items-center gap-1"
+                  data-prompt-category="msme">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">agriculture</span>
+                  "Manufacturing business finance"
+                </button>
+                <button
+                  class="prompt-chip px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors text-left flex items-center gap-1"
+                  data-prompt-category="msme">
+                  <span class="material-symbols-outlined text-[16px] text-tertiary">female</span>
+                  "Working capital for my business"
+                </button>
+                <button
+                  class="prompt-chip px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm transition-colors text-left flex items-center gap-1"
+                  data-prompt-category="msme">
+                  <span class="material-symbols-outlined text-[16px] text-primary-container">shield</span>
+                  "Government schemes for MSMEs"
+                </button>
+              </div>
+              <!-- Live Dynamic Copilot Response Box -->
+              <div class="bg-surface-container p-space-md rounded-xl mt-space-xs">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-badge text-label-badge text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] text-primary">insights</span> Real-Time AI
+                    Synthesis
+                  </span>
+                  <span
+                    class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge font-bold">
+                    AI Scheme Match
+                  </span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface leading-relaxed" id="chat-output">
+                  Based on your Udyam profile (Micro - Apparel, Varanasi), you are prime-eligible for the <strong
+                    class="text-primary font-semibold">PMEGP Manufacturing Subsidy</strong>. You qualify for an upfront
+                  Illustrative subsidy guidance; verify official terms and amounts through the relevant authority.
+                  collateral under CGTMSE.
+                </p>
+                <div
+                  class="flex items-center gap-space-md mt-space-sm pt-space-xs bg-surface-container-lowest/70 p-space-xs rounded-lg">
+                  <div class="flex items-center gap-1 font-label-badge text-label-badge text-secondary font-bold">
+                    <span class="material-symbols-outlined text-[16px]">check_circle</span> JanSamarth Auto-Route Ready
+                  </div>
+                  <div class="flex items-center gap-1 font-label-badge text-label-badge text-on-surface-variant">
+                    <span class="material-symbols-outlined text-[16px]">timer</span> Processing: ~7 Days
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Input Bar with Live Audio Visualizer Animation -->
+            <div class="mt-space-md">
+              <div class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-xl shadow-xs">
+                <!-- Simulated Sound Waves -->
+                <div class="hidden sm:flex items-center gap-0.5 px-space-xs">
+                  <span class="w-1 h-3 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.1s"></span>
+                  <span class="w-1 h-5 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.3s"></span>
+                  <span class="w-1 h-2 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+                  <span class="w-1 h-6 bg-secondary rounded-full animate-bounce" style="animation-delay: 0.4s"></span>
+                </div>
+                <input
+                  class="w-full bg-transparent px-space-xs py-space-xs font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none"
+                  id="chat-input-field" placeholder="Tell me about your business, loan need, and location..."
+                  type="text" value="I want to start a tailoring &amp; boutique business in Varanasi" />
+                <button
+                  class="p-space-xs bg-primary text-on-primary rounded-lg hover:bg-primary-container transition-colors flex items-center justify-center"
+                  id="send-query-btn">
+                  <span class="material-symbols-outlined text-[20px]">send</span>
+                </button>
+                <button id="copilot-voice-button" data-voice-trigger aria-pressed="false"
+                  class="p-space-xs bg-secondary-container text-on-secondary-container rounded-lg hover:bg-secondary-fixed transition-colors flex items-center justify-center"
+                  aria-label="Voice input">
+                  <span class="material-symbols-outlined text-[20px]">mic</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 2: Prime Recommended Scheme Card (Span 5 Cols Desktop) -->
+          <div
+            class="md:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+            <div>
+              <!-- Badging Row -->
+              <div class="flex items-center justify-between mb-space-sm">
+                <span
+                  class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge flex items-center gap-1 font-bold">
+                  <span class="material-symbols-outlined text-[14px]">stars</span> Top Recommendation
+                </span>
+                <span
+                  class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-badge text-label-badge font-bold">
+                  Scheme Match
+                </span>
+              </div>
+              <h3 id="recommendation-title"
+                class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">
+                Prime Minister Employment Generation Programme (PMEGP)
+              </h3>
+              <p id="recommendation-description" class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Administered by Khadi and Village Industries Commission (KVIC) &amp; Ministry of MSME.
+              </p>
+              <!-- Core Metric Blocks Grid -->
+              <div class="grid grid-cols-2 gap-space-xs mt-space-md">
+                <div class="bg-surface-container p-space-sm rounded-lg">
+                  <span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Max Loan Ceil</span>
+                  <p id="recommendation-loan" class="font-title-md text-title-md text-primary font-bold">Not available
+                    in current scheme data</p>
+                </div>
+                <div class="bg-surface-container p-space-sm rounded-lg">
+                  <span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Govt Subsidy</span>
+                  <p id="recommendation-subsidy" class="font-title-md text-title-md text-secondary font-bold">Terms vary
+                  </p>
+                </div>
+                <div class="bg-surface-container p-space-sm rounded-lg">
+                  <span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Collateral
+                    Req.</span>
+                  <p id="recommendation-collateral" class="font-title-md text-title-md text-on-surface font-bold">Not
+                    available in current scheme data</p>
+                </div>
+                <div class="bg-surface-container p-space-sm rounded-lg">
+                  <span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Effective
+                    Rate</span>
+                  <p id="recommendation-rate" class="font-title-md text-title-md text-on-surface font-bold">Not
+                    available in current scheme data</p>
+                </div>
+              </div>
+              <div class="mt-space-md p-space-xs rounded bg-surface-container-high flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+                <span id="recommendation-note"
+                  class="font-label-badge text-label-badge text-on-surface font-medium">Scheme information shown from
+                  the current prototype data.</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-space-xs mt-space-lg">
+              <button
+                class="w-full py-space-sm bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-on-secondary-container transition-all flex items-center justify-center gap-space-xs font-semibold">
+                <span class="material-symbols-outlined text-[18px]">bolt</span>
+                <span id="recommendation-action">View Official Application Guidance</span>
+              </button>
+              <button id="recommendation-secondary-action"
+                class="w-full py-space-xs bg-surface-container text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+                View Scheme Information
+              </button>
+            </div>
+          </div>
+          <!-- CARD 3: Application Readiness Gauge (Span 4 Cols) -->
+          <div
+            class="md:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-space-sm">
+                <span
+                  class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Application
+                  Readiness</span>
+                <span class="material-symbols-outlined text-[18px] text-primary">assessment</span>
+              </div>
+              <h4 class="font-title-md text-title-md text-on-surface font-bold">Ready to proceed</h4>
+              <!-- Circular SVG Radial Gauge -->
+              <div class="flex items-center justify-center my-space-md">
+                <div class="relative w-40 h-40 flex items-center justify-center">
+                  <svg class="w-full h-full transform -rotate-90" viewbox="0 0 120 120">
+                    <circle class="text-surface-container" cx="60" cy="60" fill="none" r="48" stroke="currentColor"
+                      stroke-width="12"></circle>
+                    <circle class="text-primary-container" cx="60" cy="60" fill="none" r="48" stroke="currentColor"
+                      stroke-dasharray="301.59" stroke-dashoffset="33.17" stroke-linecap="round" stroke-width="12">
+                    </circle>
+                  </svg>
+                  <div class="absolute flex flex-col items-center justify-center">
+                    <span class="font-headline-lg text-headline-lg font-extrabold text-on-surface">89%</span>
+                    <span class="font-label-badge text-label-badge text-secondary font-bold">Profile Match</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Component Readiness Meters -->
+              <div class="flex flex-col gap-space-xs">
+                <div>
+                  <div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mb-0.5">
+                    <span class="">Aadhaar &amp; KYC Verification</span>
+                    <span class="text-secondary font-bold">100% ✓</span>
+                  </div>
+                  <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-secondary h-full rounded-full w-full"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mb-0.5">
+                    <span class="">Credit Score: Not connected</span>
+                    <span class="text-on-surface font-semibold">Not available</span>
+                  </div>
+                  <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-primary h-full rounded-full w-[84%]"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mb-0.5">
+                    <span class="">Business Model Feasibility</span>
+                    <span class="text-primary font-bold">92%</span>
+                  </div>
+                  <div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-primary-container h-full rounded-full w-[92%]"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-space-md p-space-sm bg-surface-container rounded-lg">
+              <p class="font-label-md text-label-md text-on-surface font-medium">
+                <span class="text-secondary font-bold">Eligibility Confidence</span>: High, subject to the relevant
+                authority, bank, or implementing agency review.
+              </p>
+            </div>
+          </div>
+          <!-- CARD 4: Dynamic EMI & Upfront Subsidy Calculator (Span 8 Cols) -->
+          <div
+            class="md:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+                <div>
+                  <span
+                    class="font-label-badge text-label-badge text-primary uppercase font-bold tracking-wider">Subsidized
+                    Financing Simulator</span>
+                  <h4 class="font-title-md text-title-md text-on-surface font-bold">EMI &amp; Capital Subsidy Deductor
+                  </h4>
+                </div>
+                <span
+                  class="px-space-sm py-1 bg-surface-container-high rounded-full font-label-badge text-label-badge text-on-surface-variant">
+                  DBT Eligibility Guidance
+                </span>
+              </div>
+              <!-- Slider Controls -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+                <div class="flex flex-col gap-space-md">
+                  <!-- Loan Amount Slider -->
+                  <div>
+                    <div class="flex justify-between items-center mb-1">
+                      <span class="font-label-md text-label-md text-on-surface-variant">Loan Capital Required</span>
+                      <span class="font-title-md text-title-md text-primary font-bold"
+                        id="loan-amt-val">₹10,00,000</span>
+                    </div>
+                    <input
+                      class="w-full accent-primary h-2 bg-surface-container rounded-lg appearance-none cursor-pointer"
+                      id="loan-range" max="5000000" min="50000" step="50000" type="range" value="1000000" />
+                    <div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mt-1">
+                      <span class="">₹50,000</span>
+                      <span class="">₹25,00,000</span>
+                      <span class="">₹50,00,000</span>
+                    </div>
+                  </div>
+                  <!-- Interest Rate Slider -->
+                  <div>
+                    <div class="flex justify-between items-center mb-1">
+                      <span class="font-label-md text-label-md text-on-surface-variant">Concessional Rate of
+                        Interest</span>
+                      <span class="font-title-md text-title-md text-on-surface font-bold" id="rate-val">8.25%
+                        p.a.</span>
+                    </div>
+                    <input
+                      class="w-full accent-primary h-2 bg-surface-container rounded-lg appearance-none cursor-pointer"
+                      id="rate-range" max="13.0" min="7.0" step="0.25" type="range" value="8.25" />
+                    <div class="flex justify-between font-label-badge text-label-badge text-on-surface-variant mt-1">
+                      <span class="">7.0%</span>
+                      <span class="">10.0%</span>
+                      <span class="">13.0%</span>
+                    </div>
+                  </div>
+                  <!-- Tenure Buttons -->
+                  <div>
+                    <span class="font-label-md text-label-md text-on-surface-variant block mb-1">Repayment Tenure</span>
+                    <div class="grid grid-cols-4 gap-space-xs" id="tenure-container">
+                      <button
+                        class="py-1 rounded border-none bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors"
+                        data-years="1">1 Yr</button>
+                      <button
+                        class="py-1 rounded border-none bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors"
+                        data-years="3">3 Yrs</button>
+                      <button
+                        class="py-1 rounded border-none bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-xs"
+                        data-years="5">5 Yrs</button>
+                      <button
+                        class="py-1 rounded border-none bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors"
+                        data-years="7">7 Yrs</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Calculated Output Card Panel -->
+                <div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between">
+                  <div>
+                    <span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Estimated Monthly
+                      Payment</span>
+                    <div class="flex items-baseline gap-1 mt-1">
+                      <span class="font-display-hero text-headline-lg text-primary font-extrabold"
+                        id="emi-result">₹20,396</span>
+                      <span class="font-label-md text-label-md text-on-surface-variant">/ month</span>
+                    </div>
+                    <!-- Upfront Govt Subsidy Highlight -->
+                    <div class="mt-space-md p-space-sm rounded-lg bg-secondary-container/40">
+                      <div class="flex items-center gap-1 text-on-secondary-container">
+                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                        <span class="font-label-badge text-label-badge uppercase font-bold">Illustrative Subsidy
+                          Estimate</span>
+                      </div>
+                      <p class="font-headline-sm text-headline-sm text-secondary font-extrabold mt-0.5"
+                        id="subsidy-deduction">Not calculated</p>
+                      <p class="font-body-sm text-body-sm text-on-secondary-container/80 mt-1">
+                        Prototype guidance only. Verify scheme terms and amounts through the official source.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-space-xs pt-space-md text-left font-label-md text-label-md">
+                    <div>
+                      <span class="text-on-surface-variant block">Net Principal Burden:</span>
+                      <span class="font-semibold text-on-surface" id="net-principal">Not calculated</span>
+                    </div>
+                    <div>
+                      <span class="text-on-surface-variant block">Total Subsidy Savings:</span>
+                      <span class="font-semibold text-secondary" id="subsidy-percent-text">Not available</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between pt-space-md mt-space-md text-on-surface-variant font-label-badge text-label-badge">
+              <span class="">Prototype calculation only. Official scheme terms and amounts may differ.</span>
+            </div>
+          </div>
+          <!-- CARD 5: Documentation Status (Span 5 Cols) -->
+          <div
+            class="md:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-space-sm">
+                <span
+                  class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">DOCUMENTATION
+                  STATUS</span>
+                <span
+                  class="px-space-xs py-0.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant font-label-badge text-label-badge">Prototype
+                  Preview</span>
+              </div>
+              <h4 class="font-title-md text-title-md text-on-surface font-bold">Document Readiness</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Check your documents before applying.
+                This helps us match you with the right schemes.</p>
+              <div class="flex flex-col gap-space-xs mt-space-md">
+                <div
+                  class="grid grid-cols-[32px_1fr_auto_16px] items-center gap-space-sm p-space-sm rounded-lg bg-primary-fixed">
+                  <span
+                    class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">fingerprint</span>
+                  </span>
+                  <div class="min-w-0">
+                    <p class="font-label-md text-label-md text-on-surface font-semibold">Aadhaar Card (UIDAI)</p>
+                    <p class="font-label-badge text-label-badge text-on-surface-variant">Identity verification</p>
+                  </div>
+                  <span
+                    class="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge font-bold whitespace-nowrap"><span
+                      class="material-symbols-outlined text-[13px] align-middle">check</span> Available</span>
+                  <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+                </div>
+                <div
+                  class="grid grid-cols-[32px_1fr_auto_16px] items-center gap-space-sm p-space-sm rounded-lg bg-primary-fixed">
+                  <span
+                    class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">badge</span>
+                  </span>
+                  <div class="min-w-0">
+                    <p class="font-label-md text-label-md text-on-surface font-semibold">PAN Card</p>
+                    <p class="font-label-badge text-label-badge text-on-surface-variant">Tax identification</p>
+                  </div>
+                  <span
+                    class="px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge font-bold whitespace-nowrap"><span
+                      class="material-symbols-outlined text-[13px] align-middle">check</span> Available</span>
+                  <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+                </div>
+                <div
+                  class="grid grid-cols-[32px_1fr_auto_16px] items-center gap-space-sm p-space-sm rounded-lg bg-primary-fixed">
+                  <span
+                    class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">business</span>
+                  </span>
+                  <div class="min-w-0">
+                    <p class="font-label-md text-label-md text-on-surface font-semibold">Udyam Registration Certificate
+                    </p>
+                    <p class="font-label-badge text-label-badge text-on-surface-variant">MSME registration</p>
+                  </div>
+                  <span
+                    class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-badge text-label-badge font-bold whitespace-nowrap"><span
+                      class="material-symbols-outlined text-[13px] align-middle">warning</span> Needs Review</span>
+                  <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+                </div>
+                <div
+                  class="grid grid-cols-[32px_1fr_auto_16px] items-center gap-space-sm p-space-sm rounded-lg bg-primary-fixed">
+                  <span
+                    class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">badge</span>
+                  </span>
+                  <div class="min-w-0">
+                    <p class="font-label-md text-label-md text-on-surface font-semibold">Category Certificate
+                      (SC/ST/OBC)</p>
+                    <p class="font-label-badge text-label-badge text-on-surface-variant">If applicable</p>
+                  </div>
+                  <span
+                    class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge font-bold whitespace-nowrap"><span
+                      class="material-symbols-outlined text-[13px] align-middle">info</span> Not Provided</span>
+                  <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+                </div>
+                <div
+                  class="grid grid-cols-[32px_1fr_auto_16px] items-center gap-space-sm p-space-sm rounded-lg bg-primary-fixed">
+                  <span
+                    class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">account_balance</span>
+                  </span>
+                  <div class="min-w-0">
+                    <p class="font-label-md text-label-md text-on-surface font-semibold">6-Month Bank Statement</p>
+                    <p class="font-label-badge text-label-badge text-on-surface-variant">For financial assessment</p>
+                  </div>
+                  <span
+                    class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge font-bold whitespace-nowrap"><span
+                      class="material-symbols-outlined text-[13px] align-middle">info</span> Not Provided</span>
+                  <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-space-md flex flex-col gap-space-md">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+                <div class="flex items-center gap-space-sm">
+                  <div class="relative w-14 h-14 shrink-0">
+                    <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36" aria-label="2 of 5 documents available">
+                      <circle cx="18" cy="18" r="15" fill="none" stroke="#e2e8f0" stroke-width="4"></circle>
+                      <circle cx="18" cy="18" r="15" fill="none" stroke="#10b981" stroke-width="4"
+                        stroke-dasharray="40 60" stroke-linecap="round"></circle>
+                    </svg>
+                    <span
+                      class="absolute inset-0 flex items-center justify-center font-label-badge text-label-badge text-primary font-bold">2/5</span>
+                  </div>
+                  <div>
+                    <p class="font-label-badge text-label-badge text-secondary font-bold">2 of 5 documents available</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Upload missing documents to
+                      improve your scheme matches.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-primary-fixed text-on-surface-variant">
+                <span class="material-symbols-outlined text-[18px] text-primary shrink-0">info</span>
+                <p class="font-label-badge text-label-badge">Document verification is performed locally for guidance
+                  only. External government and bank systems are not connected yet.</p>
+              </div>
+            </div>
+          </div>
+          <!-- CARD 7: Application Journey (Right-side card) -->
+          <div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+            <div class="flex items-center justify-between gap-space-xs pb-space-md">
+              <h4 class="font-title-md text-title-md text-on-surface font-bold">Application Journey</h4>
+            </div>
+            <div class="grid grid-cols-1 gap-space-sm">
+              <div class="bg-surface-container p-space-sm rounded-lg">
+                <p class="font-label-badge text-label-badge text-secondary font-bold uppercase">01 — Eligibility Match
+                </p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Review the user's profile against the
+                  selected scheme requirements and explain the match.</p>
+              </div>
+              <div class="bg-surface-container p-space-sm rounded-lg">
+                <p class="font-label-badge text-label-badge text-secondary font-bold uppercase">02 — Document
+                  Preparation</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Check required documents and identify
+                  which documents are available or still need attention.</p>
+              </div>
+              <div class="bg-surface-container p-space-sm rounded-lg">
+                <p class="font-label-badge text-label-badge text-secondary font-bold uppercase">03 — Official
+                  Application Guidance</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Show the official application process
+                  and important instructions for the selected scheme.</p>
+              </div>
+              <div class="bg-surface-container p-space-sm rounded-lg">
+                <p class="font-label-badge text-label-badge text-secondary font-bold uppercase">04 — Find Assistance
+                  Near You</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Help the user find nearby assistance
+                  relevant to the selected scheme using their location.</p>
+              </div>
+              <div class="bg-surface-container p-space-sm rounded-lg">
+                <p class="font-label-badge text-label-badge text-secondary font-bold uppercase">05 — Application
+                  Follow-up</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Show the next steps the user should
+                  take after beginning the application.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- High-Trust Institutional Security Guarantee Strip -->
+      <section class="w-full bg-surface-container-high py-space-xl px-margin-desktop mt-space-xl">
+        <div class="max-w-[1320px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-lg">
+          <div class="flex items-center gap-space-md">
+            <div
+              class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+              <span class="material-symbols-outlined text-[28px]">verified_user</span>
+            </div>
+            <div>
+              <h4 class="font-title-md text-title-md text-on-surface font-bold">Official Benefit Guidance</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                No bank or intermediary is authorized to demand processing commissions. Report any grievance directly to
+                CPGRAMS via SchemeSetu.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm shrink-0">
+            <span
+              class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest font-label-md text-label-md text-secondary font-bold shadow-xs flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">lock_reset</span> Zero-Bribe Certified
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- Client-side Micro-Interactions Script -->
+      <script>
+        // 1. Dynamic loan and EMI calculator logic
+        const loanRange = document.getElementById('loan-range');
+        const rateRange = document.getElementById('rate-range');
+        const tenureButtons = document.querySelectorAll('#tenure-container button');
+        const loanAmtVal = document.getElementById('loan-amt-val');
+        const rateVal = document.getElementById('rate-val');
+        const emiResult = document.getElementById('emi-result');
+        const subsidyDeduction = document.getElementById('subsidy-deduction');
+        const netPrincipal = document.getElementById('net-principal');
+
+        let currentTenureYears = 5;
+
+        function formatINR(val) {
+          return '₹' + Math.round(val).toLocaleString('en-IN');
+        }
+
+        function recalculateLoan() {
+          if (!loanRange || !rateRange) return;
+          const P = parseFloat(loanRange.value);
+          const rAnnual = parseFloat(rateRange.value);
+          const N = currentTenureYears * 12;
+          const r = (rAnnual / 12) / 100;
+
+          // Display Labels
+          loanAmtVal.textContent = formatINR(P);
+          rateVal.textContent = rAnnual.toFixed(2) + '% p.a.';
+
+          subsidyDeduction.textContent = 'Not calculated';
+          netPrincipal.textContent = 'Not calculated';
+
+          // EMI calculation on gross loan prior to escrow subsidy release
+          const emi = (P * r * Math.pow(1 + r, N)) / (Math.pow(1 + r, N) - 1);
+          if (isFinite(emi)) {
+            emiResult.textContent = formatINR(emi);
+          }
+        }
+
+        if (loanRange && rateRange) {
+          loanRange.addEventListener('input', recalculateLoan);
+          rateRange.addEventListener('input', recalculateLoan);
+
+          tenureButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              tenureButtons.forEach(b => {
+                b.className = 'py-1 rounded border-none bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors';
+              });
+              btn.className = 'py-1 rounded border-none bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-xs';
+              currentTenureYears = parseInt(btn.getAttribute('data-years'), 10);
+              recalculateLoan();
+            });
+          });
+          recalculateLoan();
+        }
+
+        // 2. Smart Capital & Eligibility category controls
+        let activeCategory = 'msme';
+        const categoryConfigs = {
+          msme: {
+            subtitle: 'AI-powered scheme guidance using available public scheme information',
+            placeholder: 'Tell me about your business, loan need, and location...',
+            prompts: ['Tailoring business loan', 'Manufacturing business finance', 'Working capital for my business', 'Government schemes for MSMEs'],
+            title: 'Prime Minister Employment Generation Programme (PMEGP)',
+            description: 'Administered by Khadi and Village Industries Commission (KVIC) & Ministry of MSME.',
+            loan: 'Up to Rs 50 lakh project cost for manufacturing',
+            subsidy: 'Terms vary',
+            collateral: 'Not available in current scheme data',
+            rate: 'Not available in current scheme data',
+            note: 'Scheme information shown from the current prototype data.',
+            action: 'View Official Application Guidance',
+            secondaryAction: 'View Scheme Information',
+          },
+          artisan: {
+            subtitle: 'Guidance for artisans and traditional businesses',
+            placeholder: 'Tell me your craft, business stage, and support needed...',
+            prompts: ['Scheme for a traditional artisan', 'Support for my tailoring business', 'Tool and equipment support', 'Loan options for artisans'],
+            title: 'No matching artisan scheme is configured in the current prototype.',
+            description: 'No Vishwakarma or artisan scheme record is available in the current prototype data.',
+            loan: 'Not available in current scheme data', subsidy: 'Not available in current scheme data',
+            collateral: 'Not available in current scheme data', rate: 'Not available in current scheme data',
+            note: 'Explore the official scheme information when a matching record is configured.',
+            action: 'Explore Scheme Information', secondaryAction: 'View Scheme Information',
+          },
+          shg: {
+            subtitle: 'Guidance for SHGs, rural entrepreneurs and cooperative groups',
+            placeholder: 'Tell me your group type, activity, location, and funding need...',
+            prompts: ['Finance for my self-help group', 'Rural business support', 'Scheme for women in an SHG', 'Loan support for a rural enterprise'],
+            title: 'No matching SHG/rural scheme is configured in the current prototype.',
+            description: 'No SHG or rural cooperative scheme record is available in the current prototype data.',
+            loan: 'Not available in current scheme data', subsidy: 'Not available in current scheme data',
+            collateral: 'Not available in current scheme data', rate: 'Not available in current scheme data',
+            note: 'Explore the official scheme information when a matching record is configured.',
+            action: 'Explore Scheme Information', secondaryAction: 'View Scheme Information',
+          },
+        };
+        const categoryButtons = document.querySelectorAll('.category-tab');
+        const promptIcons = ['store', 'factory', 'account_balance_wallet', 'account_balance'];
+        const updateCategory = (category) => {
+          activeCategory = category;
+          const config = categoryConfigs[category];
+          categoryButtons.forEach(button => {
+            const isActive = button.id === `category-${category}`;
+            button.setAttribute('aria-selected', String(isActive));
+            button.classList.toggle('bg-surface-container-lowest', isActive);
+            button.classList.toggle('shadow-sm', isActive);
+            button.classList.toggle('text-on-surface', isActive);
+            button.classList.toggle('bg-surface-container-high', !isActive);
+            button.classList.toggle('text-on-surface-variant', !isActive);
+            button.classList.toggle('font-semibold', isActive);
+          });
+          document.getElementById('copilot-subtitle').textContent = config.subtitle;
+          document.getElementById('chat-input-field').placeholder = config.placeholder;
+          document.querySelectorAll('.prompt-chip').forEach((chip, index) => {
+            chip.dataset.promptCategory = category;
+            chip.innerHTML = `<span class="material-symbols-outlined text-[16px] text-primary">${promptIcons[index]}</span>"${config.prompts[index]}"`;
+          });
+          document.getElementById('recommendation-title').textContent = config.title;
+          document.getElementById('recommendation-description').textContent = config.description;
+          document.getElementById('recommendation-loan').textContent = config.loan;
+          document.getElementById('recommendation-subsidy').textContent = config.subsidy;
+          document.getElementById('recommendation-collateral').textContent = config.collateral;
+          document.getElementById('recommendation-rate').textContent = config.rate;
+          document.getElementById('recommendation-note').textContent = config.note;
+          document.getElementById('recommendation-action').textContent = config.action;
+          document.getElementById('recommendation-secondary-action').textContent = config.secondaryAction;
+          document.getElementById('chat-output').textContent = category === 'msme'
+            ? 'Based on the available public scheme information, explore PMEGP and MUDRA guidance for MSME needs. Complete your profile to get a personalized match.'
+            : config.title;
+        };
+        categoryButtons.forEach(button => button.addEventListener('click', () => updateCategory(button.id.replace('category-', ''))));
+        updateCategory(activeCategory);
+
+        // Setu Saathi prompt interactions
+        const promptChips = document.querySelectorAll('.prompt-chip');
+        const chatInput = document.getElementById('chat-input-field');
+        const chatOutput = document.getElementById('chat-output');
+        const sendBtn = document.getElementById('send-query-btn');
+
+        promptChips.forEach(chip => {
+          chip.addEventListener('click', () => {
+            const text = chip.textContent.trim().replace(/"/g, '');
+            if (chatInput) chatInput.value = text;
+            chatOutput.textContent = activeCategory === 'msme'
+              ? 'Based on the available public scheme information, I can help you explore PMEGP and MUDRA guidance. Complete your profile to get a personalized match.'
+              : 'Based on the information provided, I can help you explore relevant government scheme information. Complete your profile to get a personalized match.';
+          });
+        });
+
+        if (sendBtn && chatInput && chatOutput) {
+          sendBtn.addEventListener('click', () => {
+            const val = chatInput.value;
+            if (!val) return;
+            chatOutput.textContent = activeCategory === 'msme'
+              ? 'Based on the information provided, I can help you explore PMEGP and MUDRA guidance. Complete your profile to get a personalized match.'
+              : 'Based on the information provided, I can help you explore relevant government scheme information. Complete your profile to get a personalized match.';
+          });
+        }
+
+        const storyCarousel = document.getElementById('story-carousel');
+        const storyTrack = storyCarousel?.querySelector('[data-story-track]');
+        const baseStoryCards = storyTrack ? Array.from(storyTrack.children) : [];
+        baseStoryCards.forEach(card => storyTrack?.appendChild(card.cloneNode(true)));
+        const storyCards = storyTrack ? Array.from(storyTrack.children) : [];
+        const storyDots = document.getElementById('story-dots');
+        let storyIndex = 0;
+        let storyTimer;
+        const renderStory = () => {
+          const visibleCount = window.innerWidth <= 700 ? 1 : window.innerWidth <= 1000 ? 2 : 5;
+          const maxIndex = Math.max(0, storyCards.length - visibleCount);
+          storyIndex = Math.min(storyIndex, maxIndex);
+          if (storyTrack) storyTrack.style.transform = `translateX(calc(-${storyIndex} * (100% / ${visibleCount} + 16px)))`;
+          storyDots?.querySelectorAll('button').forEach((dot, index) => dot.classList.toggle('active', index === storyIndex));
+        };
+        const setStory = (nextIndex) => {
+          const maxIndex = Math.max(0, storyCards.length - (window.innerWidth <= 700 ? 1 : window.innerWidth <= 1000 ? 2 : 5));
+          storyIndex = nextIndex > maxIndex ? 0 : nextIndex < 0 ? maxIndex : nextIndex;
+          renderStory();
+        };
+        baseStoryCards.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'story-dot';
+          dot.setAttribute('aria-label', `Show prototype story ${index + 1}`);
+          dot.addEventListener('click', () => setStory(index));
+          storyDots?.appendChild(dot);
+        });
+        document.getElementById('story-prev')?.addEventListener('click', () => setStory(storyIndex - 1));
+        document.getElementById('story-next')?.addEventListener('click', () => setStory(storyIndex + 1));
+        const startStoryTimer = () => { storyTimer = window.setInterval(() => setStory(storyIndex + 1), 5000); };
+        const stopStoryTimer = () => window.clearInterval(storyTimer);
+        storyCarousel?.addEventListener('mouseenter', stopStoryTimer);
+        storyCarousel?.addEventListener('mouseleave', startStoryTimer);
+        window.addEventListener('resize', renderStory);
+        renderStory();
+        startStoryTimer();
+
+        // Partner locator using Google Maps & Google Places API
+        const INDIA_DEFAULT_VIEW = { lat: 20.5937, lng: 78.9629 }; // Neutral pan-India overview until location is detected
+        const partnerSearch = document.getElementById('partner-search');
+        const partnerSearchButton = document.getElementById('partner-search-button');
+        const partnerLocateButton = document.getElementById('partner-locate-button');
+        const partnerResults = document.getElementById('partner-results');
+        const partnerEmpty = document.getElementById('partner-empty');
+        const partnerStatus = document.getElementById('partner-status');
+        const partnerSeeMore = document.getElementById('partner-see-more');
+        let activePartnerFilter = 'all';
+        let partnerCoordinates = null;
+        let partnerRequestId = 0;
+        let partnerPlaces = [];
+        let showAllPartners = false;
+        let profileLocation = { state: '', district: '' };
+        let partnerMarkers = [];
+        let userMarker = null;
+        let activeInfoWindow = null;
+
+        function setPartnerState(message, isError = false) {
+          if (!partnerStatus) return;
+          partnerStatus.textContent = message;
+          partnerStatus.classList.toggle('text-red-700', isError);
+        }
+
+        function initPartnerMap() {
+          const mapElement = document.getElementById('partner-map');
+          if (!mapElement || !window.google?.maps) return;
+          if (window.partnerMap) return;
+
+          const initialCenter = partnerCoordinates || INDIA_DEFAULT_VIEW;
+          const initialZoom = partnerCoordinates ? 14 : 5;
+
+          window.partnerMap = new google.maps.Map(mapElement, {
+            center: initialCenter,
+            zoom: initialZoom,
+            mapTypeControl: false,
+            streetViewControl: false,
+            fullscreenControl: true,
+            zoomControl: true,
+          });
+
+          if (partnerCoordinates) {
+            updateUserMarker();
+          }
+          if (partnerPlaces.length) {
+            updatePartnerMap(partnerPlaces);
+          }
+        }
+
+        // Register global hook for Google Maps loader callback
+        window.onGoogleMapsLoaded = function () {
+          initPartnerMap();
+        };
+
+        function updateUserMarker() {
+          if (!window.partnerMap || !partnerCoordinates || !window.google?.maps) return;
+          if (!userMarker) {
+            userMarker = new google.maps.Marker({
+              position: partnerCoordinates,
+              map: window.partnerMap,
+              title: 'Your Location',
+              icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 9,
+                fillColor: '#005AC1',
+                fillOpacity: 1,
+                strokeColor: '#FFFFFF',
+                strokeWeight: 2.5,
+              },
+            });
+            const userWindow = new google.maps.InfoWindow({
+              content: '<div style="font-family:sans-serif;padding:4px;font-size:13px;font-weight:600;color:#005AC1;">Your Current Location</div>',
+            });
+            userMarker.addListener('click', () => {
+              if (activeInfoWindow) activeInfoWindow.close();
+              userWindow.open({ map: window.partnerMap, anchor: userMarker });
+              activeInfoWindow = userWindow;
+            });
+          } else {
+            userMarker.setPosition(partnerCoordinates);
+            userMarker.setMap(window.partnerMap);
+          }
+        }
+
+        function updatePartnerMap(places) {
+          if (!window.partnerMap || !window.google?.maps) return;
+          partnerMarkers.forEach(marker => marker.setMap(null));
+          partnerMarkers = [];
+          if (activeInfoWindow) activeInfoWindow.close();
+
+          const bounds = new google.maps.LatLngBounds();
+          if (partnerCoordinates) {
+            bounds.extend(partnerCoordinates);
+          }
+
+          places.forEach((place) => {
+            if (!place.location || !Number.isFinite(Number(place.location.lat)) || !Number.isFinite(Number(place.location.lng))) return;
+            const position = { lat: Number(place.location.lat), lng: Number(place.location.lng) };
+            const marker = new google.maps.Marker({
+              position,
+              map: window.partnerMap,
+              title: place.name || 'Partner location',
+            });
+
+            const safeName = (place.name || 'Partner Location').replace(/[&<>"']/g, '');
+            const safeAddr = (place.formattedAddress || 'Address not listed').replace(/[&<>"']/g, '');
+            const directionsHtml = place.googleMapsUri
+              ? `<div style="margin-top:8px;"><a href="${place.googleMapsUri}" target="_blank" rel="noreferrer" style="font-size:12px;color:#005ac1;font-weight:600;text-decoration:none;">Get Directions on Google Maps →</a></div>`
+              : '';
+
+            const infoWindow = new google.maps.InfoWindow({
+              content: `<div style="font-family:sans-serif;padding:6px 8px;max-width:260px;line-height:1.4;">
+                <div style="font-size:14px;font-weight:700;color:#1a1c1e;margin-bottom:4px;">${safeName}</div>
+                <div style="font-size:12px;color:#43474e;">${safeAddr}</div>
+                ${directionsHtml}
+              </div>`,
+            });
+
+            marker.addListener('click', () => {
+              if (activeInfoWindow) activeInfoWindow.close();
+              infoWindow.open({ map: window.partnerMap, anchor: marker });
+              activeInfoWindow = infoWindow;
+            });
+
+            place._marker = marker;
+            place._infoWindow = infoWindow;
+            partnerMarkers.push(marker);
+            bounds.extend(position);
+          });
+
+          if (!partnerMarkers.length) return;
+          if (partnerMarkers.length === 1 && !partnerCoordinates) {
+            window.partnerMap.setCenter(partnerMarkers[0].getPosition());
+            window.partnerMap.setZoom(15);
+          } else {
+            window.partnerMap.fitBounds(bounds);
+          }
+        }
+
+        function renderPartnerResults(places) {
+          if (!partnerResults) return;
+          partnerResults.innerHTML = '';
+          if (!places.length) {
+            partnerEmpty?.classList.remove('hidden');
+            return;
+          }
+
+          partnerEmpty?.classList.add('hidden');
+          const visiblePlaces = showAllPartners ? places : places.slice(0, 4);
+          visiblePlaces.forEach(place => {
+            const card = document.createElement('div');
+            card.className = 'partner-card bg-surface-container p-space-sm rounded-lg flex flex-col justify-between cursor-pointer hover:bg-surface-container-high transition-colors border border-transparent hover:border-outline-variant';
+
+            const content = document.createElement('div');
+            const topRow = document.createElement('div');
+            topRow.className = 'flex items-start justify-between gap-1';
+
+            const name = document.createElement('p');
+            name.className = 'font-label-md text-label-md text-on-surface font-bold leading-tight';
+            name.textContent = place.name || 'Support Center';
+            topRow.appendChild(name);
+
+            const badge = document.createElement('span');
+            badge.className = 'shrink-0 text-[10px] font-semibold uppercase px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary';
+            const isBank = /bank|sbi|hdfc|icici|pnb|bob|canara|axis/i.test(place.name || '');
+            const isGov = /court|office|bhawan|bhavan|ministry|secretariat|pragati|vfs|passport|embassy/i.test(place.name || '');
+            badge.textContent = isBank ? 'Bank' : isGov ? 'Gov Office' : 'Support Center';
+            topRow.appendChild(badge);
+
+            const address = document.createElement('p');
+            address.className = 'font-body-sm text-body-sm text-on-surface-variant mt-1.5';
+            address.textContent = place.formattedAddress || 'Address unavailable';
+
+            content.append(topRow, address);
+            card.appendChild(content);
+
+            const actionRow = document.createElement('div');
+            actionRow.className = 'flex items-center justify-between gap-2 mt-space-sm pt-1 border-t border-outline-variant/30';
+
+            const viewOnMapBtn = document.createElement('button');
+            viewOnMapBtn.type = 'button';
+            viewOnMapBtn.className = 'font-label-badge text-label-badge text-primary font-semibold hover:underline flex items-center gap-0.5';
+            viewOnMapBtn.innerHTML = '<span class="material-symbols-outlined text-[14px]">pin_drop</span> View on Map';
+            viewOnMapBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              focusPlaceOnMap(place);
+            });
+            actionRow.appendChild(viewOnMapBtn);
+
+            if (place.googleMapsUri) {
+              const directions = document.createElement('a');
+              directions.className = 'px-space-xs py-1 bg-primary text-on-primary rounded font-label-badge text-label-badge hover:bg-primary-container text-center';
+              directions.target = '_blank';
+              directions.rel = 'noreferrer';
+              directions.href = place.googleMapsUri;
+              directions.textContent = 'Directions →';
+              directions.addEventListener('click', (e) => e.stopPropagation());
+              actionRow.appendChild(directions);
+            }
+
+            card.appendChild(actionRow);
+
+            card.addEventListener('click', () => {
+              focusPlaceOnMap(place);
+            });
+
+            partnerResults.appendChild(card);
+          });
+
+          if (partnerSeeMore) {
+            partnerSeeMore.classList.toggle('hidden', places.length <= 4);
+            partnerSeeMore.textContent = showAllPartners ? 'Show Less ↑' : `See More (${places.length}) →`;
+          }
+        }
+
+        function focusPlaceOnMap(place) {
+          if (!window.partnerMap || !place.location) return;
+          const pos = { lat: Number(place.location.lat), lng: Number(place.location.lng) };
+          window.partnerMap.panTo(pos);
+          window.partnerMap.setZoom(16);
+          if (place._infoWindow && place._marker) {
+            if (activeInfoWindow) activeInfoWindow.close();
+            place._infoWindow.open({ map: window.partnerMap, anchor: place._marker });
+            activeInfoWindow = place._infoWindow;
+          }
+        }
+
+        function renderCurrentPartnerResults() {
+          renderPartnerResults(partnerPlaces);
+          updatePartnerMap(partnerPlaces);
+        }
+
+        async function searchPartners(query = '') {
+          const trimmedQuery = query.trim();
+          if (!partnerCoordinates && !trimmedQuery) {
+            setPartnerState('Location access was denied. Search by city, area or PIN instead.', true);
+            return;
+          }
+
+          const requestId = ++partnerRequestId;
+          const params = new URLSearchParams();
+          if (partnerCoordinates) {
+            params.set('lat', partnerCoordinates.lat);
+            params.set('lng', partnerCoordinates.lng);
+          }
+          if (trimmedQuery) {
+            params.set('query', trimmedQuery);
+          }
+
+          partnerEmpty?.classList.add('hidden');
+          setPartnerState('Searching nearby support centers...');
+          if (partnerSearchButton) {
+            partnerSearchButton.disabled = true;
+            partnerSearchButton.textContent = 'Searching...';
+          }
+
+          try {
+            const response = await fetch(`http://localhost:5001/api/partners/nearby?${params.toString()}`);
+            const data = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(data.error || 'Partner search failed.');
+            if (requestId !== partnerRequestId) return;
+            partnerPlaces = Array.isArray(data.places) ? data.places : [];
+            showAllPartners = false;
+            renderCurrentPartnerResults();
+            if (partnerPlaces.length > 0) {
+              setPartnerState(`Found ${partnerPlaces.length} nearby support center${partnerPlaces.length === 1 ? '' : 's'}.`);
+            } else {
+              partnerEmpty?.classList.remove('hidden');
+              setPartnerState('No support centers found for this search. Try a different term or location.', false);
+            }
+          } catch (error) {
+            if (requestId !== partnerRequestId) return;
+            partnerEmpty?.classList.add('hidden');
+            setPartnerState(error.message || 'Unable to load partner locations. Please try again.', true);
+          } finally {
+            if (partnerSearchButton) {
+              partnerSearchButton.disabled = false;
+              partnerSearchButton.textContent = 'Search';
+            }
+          }
+        }
+
+        partnerSearchButton?.addEventListener('click', () => searchPartners(partnerSearch?.value || ''));
+        partnerLocateButton?.addEventListener('click', () => requestUserLocation(true));
+        partnerSeeMore?.addEventListener('click', () => {
+          showAllPartners = !showAllPartners;
+          renderPartnerResults(partnerPlaces);
+        });
+        partnerSearch?.addEventListener('keydown', event => {
+          if (event.key === 'Enter') searchPartners(partnerSearch.value || '');
+        });
+
+        document.querySelectorAll('.partner-filter').forEach(button => {
+          button.addEventListener('click', () => {
+            activePartnerFilter = button.dataset.filter || 'all';
+            document.querySelectorAll('.partner-filter').forEach(filterButton => {
+              const isMatch = filterButton === button;
+              filterButton.className = isMatch
+                ? 'partner-filter px-space-sm py-1 rounded-lg bg-primary text-on-primary font-label-badge text-label-badge'
+                : 'partner-filter px-space-sm py-1 rounded-lg bg-surface-container-high text-on-surface font-label-badge text-label-badge';
+            });
+            const searchVal = partnerSearch?.value || '';
+            const filterQuery = activePartnerFilter === 'bank'
+              ? (searchVal ? `${searchVal} bank` : 'bank')
+              : searchVal;
+            searchPartners(filterQuery);
+          });
+        });
+
+        function geocodeProfileLocation() {
+          const locationText = [profileLocation.district, profileLocation.state].filter(Boolean).join(', ');
+          if (!locationText) {
+            return false;
+          }
+          if (!window.google?.maps?.Geocoder) return false;
+          new google.maps.Geocoder().geocode({ address: locationText }, (results, status) => {
+            if (status !== 'OK' || !results?.[0]?.geometry?.location || partnerCoordinates) return;
+            const location = results[0].geometry.location;
+            partnerCoordinates = { lat: location.lat(), lng: location.lng() };
+            if (window.partnerMap) {
+              window.partnerMap.setCenter(partnerCoordinates);
+              window.partnerMap.setZoom(14);
+              updateUserMarker();
+            }
+            searchPartners(activePartnerFilter === 'bank' ? 'bank' : (partnerSearch?.value || ''));
+          });
+          return true;
+        }
+
+        window.addEventListener('message', event => {
+          if (event.data?.type !== 'profile-location') return;
+          profileLocation = event.data.location || { state: '', district: '' };
+          if (!partnerCoordinates) geocodeProfileLocation();
+        });
+
+        function requestUserLocation(isManual = false) {
+          setPartnerState('Detecting your current location...');
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              position => {
+                partnerCoordinates = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude,
+                };
+                if (window.partnerMap) {
+                  window.partnerMap.setCenter(partnerCoordinates);
+                  window.partnerMap.setZoom(14);
+                  updateUserMarker();
+                }
+                searchPartners(activePartnerFilter === 'bank' ? 'bank' : (partnerSearch?.value || ''));
+              },
+              error => {
+                partnerCoordinates = null;
+                const hadProfile = geocodeProfileLocation();
+                if (!hadProfile) {
+                  const message = error.code === error.PERMISSION_DENIED
+                    ? 'Location access was denied. Search by city, area or PIN instead.'
+                    : 'Location is unavailable. Search by city, area or PIN instead.';
+                  setPartnerState(message, true);
+                }
+              },
+              { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+            );
+          } else {
+            partnerCoordinates = null;
+            const hadProfile = geocodeProfileLocation();
+            if (!hadProfile) {
+              setPartnerState('Location access is not supported. Search by city, area or PIN instead.', true);
+            }
+          }
+        }
+
+        // Trigger initial location check on load
+        requestUserLocation(false);
+
+        // 3. Hero voice button trigger micro-interaction
+        const voiceBtn = document.getElementById('voice-trigger-btn');
+        if (voiceBtn) {
+          voiceBtn.addEventListener('click', () => {
+            alert("Bolkar Khojein Active: Please speak your business need in Hindi, Telugu, Tamil, or English...");
+          });
+        }
+
+        // 4. Keyboard Shortcut [Ctrl + K]
+        document.addEventListener('keydown', (e) => {
+          if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const heroInput = document.getElementById('chat-input-field');
+            if (heroInput) {
+              heroInput.focus();
+              heroInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }
+        });
+      </script>
+    </div>
+  </main>
+  <footer
+    class="w-full bg-surface-container-low mt-space-3xl pt-space-2xl pb-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="max-w-[1320px] mx-auto px-margin-desktop">
+      <div class="flex flex-wrap items-center justify-between gap-space-lg pb-space-xl">
+        <div class="flex flex-col gap-space-xxs"><span
+            class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Sovereign Ecosystem
+            &amp; Financial Delivery Partners</span>
+          <div class="flex flex-wrap items-center gap-space-md mt-space-xs"><span
+              class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">MSME
+              Ministry</span><span
+              class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">SIDBI</span><span
+              class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">NABARD</span><span
+              class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">NPCI</span><span
+              class="px-space-sm py-space-xxs rounded bg-surface-container-lowest font-label-md text-label-md text-on-surface shadow-sm">Digital
+              India</span></div>
+        </div>
+        <div
+          class="flex items-center gap-space-md bg-surface-container-lowest px-space-lg py-space-sm rounded-xl shadow-sm">
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container">
+            <span class="material-symbols-outlined">support_agent</span>
+          </div>
+          <div>
+            <p class="font-label-badge text-label-badge text-on-surface-variant uppercase">Toll-Free Sovereign AI
+              Helpline</p>
+            <p class="font-title-md text-title-md text-secondary">1800-SETU-AI</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-space-xl py-space-xl">
+        <div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Central Credit
+            Schemes</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">PM
+            SVANidhi Microcredit</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface"
+            href="#">PMEGP Capital Subsidy</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Mudra Shishu &amp;
+            Kishore</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface"
+            href="#">Stand-Up India Facility</a></div>
+        <div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Verification
+            &amp; Assist</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface"
+            href="#">Udyam Aadhaar Cross-Check</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">DigiLocker Direct
+            Fetch</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface"
+            href="#">JanSamarth Sync Status</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">AI Voice
+            Transcriptions</a></div>
+        <div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Network &amp;
+            Access</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">CSC
+            Center Locator</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface"
+            href="#">Lead Bank District Nodal</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Regional Rural Bank
+            Desks</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface"
+            href="#">Grievance Redressal Portal</a></div>
+        <div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Governance
+            &amp; Policy</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface"
+            href="#">DBT Guidelines 2024</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Data Privacy
+            Compliance</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface"
+            href="#">Accessibility Statement</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface" href="#">National
+            Informatics Centre</a></div>
+      </div>
+      <div
+        class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+        <p class="">© 2025 SchemeSetu Sovereign Financial Platform. Designed under the National Financial Inclusion
+          Charter, Government of India.</p>
+        <p class="font-label-badge text-label-badge text-on-surface-variant">Zero-Bribery Guarantee • End-to-End
+          Encrypted Sovereign Portal</p>
+      </div>
+    </div>
+  </footer>
+  <div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2.5">
+    <!-- Subtle prompt teaser / badge -->
+    <div
+      class="bg-white/95 backdrop-blur-md text-slate-800 text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-lg border border-indigo-100 flex items-center gap-2 animate-bounce duration-1000">
+      <span class="flex h-2 w-2 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span>Ask Scheme AI anything in 22 languages</span>
+    </div>
+    <!-- Primary Floating Action Button -->
+    <div
+      class="flex items-center shadow-2xl rounded-full bg-gradient-to-r from-slate-900 via-indigo-950 to-indigo-900 p-1.5 border border-indigo-400/40 hover:border-indigo-400 transition-all duration-300 hover:scale-105 group cursor-pointer">
+      <button class="flex items-center gap-3 pl-4 pr-3 py-2 text-white font-semibold text-sm" data-ai-trigger>
+        <div class="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center text-amber-300 shadow-inner">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </div>
+        <div class="text-left leading-tight">
+          <div class="text-sm font-bold tracking-wide flex items-center gap-1.5">
+            Scheme AI Assist
+            <span
+              class="bg-amber-400 text-slate-950 text-[10px] font-extrabold px-1.5 py-0.5 rounded tracking-wider">LIVE</span>
+          </div>
+          <div class="text-[11px] text-indigo-200 font-normal">Subsidies • Loans • Grants</div>
+        </div>
+      </button>
+      <div class="h-8 w-[1px] bg-white/20 mx-1"></div>
+      <button data-voice-trigger aria-pressed="false"
+        class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+        title="Voice Query">
+        <svg class="w-4 h-4 text-amber-300" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"></path>
+          <path
+            d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <style>
+    #google_translate_element {
+      position: fixed;
+      left: -9999px;
+      top: -9999px;
+    }
+
+    .language-popover {
+      position: fixed;
+      z-index: 100;
+      top: 74px;
+      right: 190px;
+      display: none;
+      width: 172px;
+      padding: 8px;
+      border: 1px solid #d9dced;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, .16);
+    }
+
+    .language-popover.open {
+      display: grid;
+      gap: 3px;
+    }
+
+    .language-option {
+      border: 0;
+      border-radius: 9px;
+      background: transparent;
+      color: #24243f;
+      padding: 10px 12px;
+      text-align: left;
+      font: 600 13px Inter, sans-serif;
+      cursor: pointer;
+    }
+
+    .language-option:hover,
+    .language-option.active {
+      background: #eeedff;
+      color: #4138ad;
+    }
+
+    .ai-toast {
+      position: fixed;
+      bottom: 92px;
+      right: 28px;
+      z-index: 100;
+      max-width: 290px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      background: #252061;
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(30, 27, 75, .25);
+      font: 600 13px Inter, sans-serif;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: .2s ease;
+      pointer-events: none;
+    }
+
+    .ai-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    [data-voice-trigger][aria-pressed="true"] {
+      outline: 3px solid rgba(16, 185, 129, .45);
+      animation: voicePulse 1s ease-in-out infinite;
+    }
+
+    @keyframes voicePulse {
+      50% {
+        transform: scale(1.04);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .language-popover {
+        top: 69px;
+        right: 12px;
+      }
+    }
+
+    .partner-map {
+      width: 100%;
+      height: 360px;
+      min-height: 300px;
+      margin-bottom: 16px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .category-tab {
+      transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .story-carousel {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      border-radius: 16px;
+      background: #f2f3ff;
+    }
+
+    .story-slide {
+      display: grid;
+      grid-template-columns: minmax(150px, 0.35fr) 1fr;
+      gap: 28px;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .story-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      text-align: center;
+      color: #0f172a;
+    }
+
+    .story-photo {
+      width: 112px;
+      height: 112px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fd651e;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+    }
+
+    .story-profile strong {
+      font-size: 1rem;
+    }
+
+    .story-profile span {
+      color: #64748b;
+      font-size: 0.8rem;
+    }
+
+    .story-copy {
+      position: relative;
+      min-width: 0;
+    }
+
+    .story-quote {
+      display: block;
+      height: 28px;
+      color: #fd651e;
+      font-size: 4rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
+    .story-stars {
+      color: #f59e0b;
+      letter-spacing: 0.12em;
+      font-size: 1.1rem;
+    }
+
+    .story-copy p {
+      margin: 8px 0 14px;
+      color: #1e293b;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .story-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .story-tags span {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #312e81;
+      font: 700 0.72rem/1 Inter, sans-serif;
+    }
+
+    .story-carousel-arrow {
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 50%;
+      background: #00102e;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    .story-carousel-arrow:hover {
+      background: #0f254b;
+    }
+
+    .story-carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 14px;
+    }
+
+    .story-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #c5c6cf;
+      cursor: pointer;
+    }
+
+    .story-dot.active {
+      width: 22px;
+      border-radius: 999px;
+      background: #fd651e;
+    }
+
+    .story-carousel {
+      overflow: hidden;
+    }
+
+    .story-track {
+      display: flex;
+      gap: 16px;
+      min-width: 0;
+      transition: transform 0.45s ease;
+    }
+
+    .story-card {
+      flex: 0 0 calc((100% - 64px) / 5);
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid #e2e7ff;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    }
+
+    .story-card-photo {
+      width: 100%;
+      aspect-ratio: 1.35;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .story-card strong {
+      display: block;
+      margin-top: 10px;
+      color: #0f172a;
+      font-size: 0.9rem;
+    }
+
+    .story-card-location {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-top: 4px;
+      color: #64748b;
+      font-size: 0.72rem;
+    }
+
+    .story-card-location .material-symbols-outlined {
+      font-size: 14px;
+      color: #fd651e;
+    }
+
+    .story-card-stars {
+      display: block;
+      margin-top: 8px;
+      color: #f59e0b;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+    }
+
+    .story-card p {
+      min-height: 72px;
+      margin: 8px 0 12px;
+      color: #334155;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .story-card .story-tags {
+      gap: 5px;
+    }
+
+    .story-card .story-tags span {
+      padding: 4px 6px;
+      font-size: 0.63rem;
+    }
+
+    @media (max-width: 768px) {
+      .partner-map {
+        height: 300px;
+        min-height: 260px;
+      }
+
+      .story-carousel {
+        grid-template-columns: auto 1fr auto;
+        padding: 14px;
+        gap: 8px;
+      }
+
+      .story-slide {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        text-align: center;
+      }
+
+      .story-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .story-copy p {
+        font-size: 0.95rem;
+      }
+
+      .story-card {
+        flex-basis: calc((100% - 16px) / 2);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .story-card {
+        flex-basis: 100%;
+      }
+
+      .story-card p {
+        min-height: auto;
+      }
+    }
+  </style>
+  <div id="google_translate_element" aria-hidden="true"></div>
+  <div class="language-popover" id="language-popover" role="menu" aria-label="Choose language">
+    <button class="language-option active" data-lang="en" type="button">English</button>
+    <button class="language-option" data-lang="hi" type="button">हिन्दी</button>
+    <button class="language-option" data-lang="te" type="button">తెలుగు</button>
+    <button class="language-option" data-lang="ta" type="button">தமிழ்</button>
+  </div>
+  <div class="ai-toast" id="ai-toast" role="status"></div>
+  <script>
+    (() => {
+      const languageButton = document.getElementById('language-menu-button');
+      const popover = document.getElementById('language-popover');
+      const languageOptions = document.querySelectorAll('.language-option');
+      const aiOutput = document.getElementById('chat-output');
+      const aiInput = document.getElementById('chat-input-field');
+      const previousSendButton = document.getElementById('send-query-btn');
+      const toast = document.getElementById('ai-toast');
+      let currentLanguage = 'en-IN';
+
+      const showToast = (message) => {
+        toast.textContent = message;
+        toast.classList.add('show');
+        window.setTimeout(() => toast.classList.remove('show'), 2600);
+      };
+
+      window.googleTranslateElementInit = () => {
+        new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,hi,te,ta', autoDisplay: false }, 'google_translate_element');
+      };
+      const translationScript = document.createElement('script');
+      translationScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      translationScript.async = true;
+      document.head.appendChild(translationScript);
+
+      const setLanguage = (language) => {
+        currentLanguage = ({ en: 'en-IN', hi: 'hi-IN', te: 'te-IN', ta: 'ta-IN' })[language] || 'en-IN';
+        document.documentElement.lang = language;
+        languageOptions.forEach(option => option.classList.toggle('active', option.dataset.lang === language));
+        const combo = document.querySelector('.goog-te-combo');
+        if (combo) {
+          combo.value = language;
+          combo.dispatchEvent(new Event('change'));
+          showToast('Page language changed.');
+        } else {
+          showToast('Translator is loading. Please choose the language again in a moment.');
+        }
+        popover.classList.remove('open');
+        languageButton.setAttribute('aria-expanded', 'false');
+      };
+
+      languageButton.addEventListener('click', () => {
+        const isOpen = popover.classList.toggle('open');
+        languageButton.setAttribute('aria-expanded', String(isOpen));
+      });
+      languageOptions.forEach(option => option.addEventListener('click', () => setLanguage(option.dataset.lang)));
+      document.querySelectorAll('[data-language]').forEach(option => option.addEventListener('click', () => setLanguage(option.dataset.language)));
+
+      const speakResponse = (text) => {
+        if (!('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = currentLanguage;
+        utterance.rate = 1;
+        window.speechSynthesis.speak(utterance);
+      };
+
+      const askAI = async (shouldSpeak = false) => {
+        const question = aiInput.value.trim();
+        if (!question) {
+          aiInput.focus();
+          showToast('Tell Setu Saathi about your business or scheme question.');
+          return;
+        }
+        aiOutput.textContent = 'Setu Saathi is analysing your request…';
+        try {
+          const response = await fetch('http://localhost:5000/api/chat', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: question })
+          });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || 'Assistant unavailable');
+          aiOutput.textContent = data.reply;
+          if (shouldSpeak) speakResponse(data.reply);
+        } catch (error) {
+          const fallback = `For “${question}”, start by checking PMEGP, Mudra, and Stand-Up India eligibility. Setu Saathi’s live service is currently unavailable, so this is a guided recommendation.`;
+          aiOutput.textContent = fallback;
+          if (shouldSpeak) speakResponse(fallback);
+        }
+      };
+
+      const sendButton = previousSendButton.cloneNode(true);
+      previousSendButton.replaceWith(sendButton);
+      sendButton.addEventListener('click', askAI);
+      aiInput.addEventListener('keydown', event => { if (event.key === 'Enter') askAI(); });
+      document.querySelectorAll('[data-ai-trigger]').forEach(button => button.addEventListener('click', () => {
+        aiInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        aiInput.focus();
+        showToast('Setu Saathi is ready to help.');
+      }));
+
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      let activeRecognition = null;
+
+      const stopVoiceRecognition = () => {
+        const recognition = activeRecognition;
+        activeRecognition = null;
+        if (!recognition) return;
+
+        recognition.onresult = null;
+        recognition.onerror = null;
+        recognition.onend = null;
+        try {
+          recognition.stop();
+        } catch (error) {
+          if (error.name !== 'InvalidStateError') throw error;
+        }
+      };
+      window.stopSetuCopilotVoice = stopVoiceRecognition;
+
+      document.querySelectorAll('[data-voice-trigger]').forEach(originalButton => {
+        const voiceButton = originalButton.cloneNode(true);
+        originalButton.replaceWith(voiceButton);
+        voiceButton.addEventListener('click', () => {
+          if (activeRecognition) {
+            stopVoiceRecognition();
+            voiceButton.setAttribute('aria-pressed', 'false');
+            return;
+          }
+          if (!SpeechRecognition) {
+            showToast('Voice assistance is not supported in this browser. Please type your question.');
+            aiInput.focus();
+            return;
+          }
+          const recognition = new SpeechRecognition();
+          recognition.lang = currentLanguage;
+          recognition.interimResults = true;
+          recognition.maxAlternatives = 1;
+          voiceButton.setAttribute('aria-pressed', 'true');
+          showToast('Listening… speak your scheme question now.');
+          recognition.onresult = (event) => {
+            const transcript = Array.from(event.results).map(result => result[0].transcript).join(' ');
+            aiInput.value = transcript;
+            if (event.results[event.results.length - 1].isFinal) {
+              stopVoiceRecognition();
+              voiceButton.setAttribute('aria-pressed', 'false');
+              askAI(true);
+            }
+          };
+          recognition.onerror = (event) => {
+            stopVoiceRecognition();
+            voiceButton.setAttribute('aria-pressed', 'false');
+            showToast(event.error === 'not-allowed' ? 'Microphone permission is needed for voice assistance.' : 'I could not hear that. Please try again.');
+          };
+          recognition.onend = () => {
+            if (activeRecognition === recognition) activeRecognition = null;
+            voiceButton.setAttribute('aria-pressed', 'false');
+          };
+          activeRecognition = recognition;
+          try {
+            recognition.start();
+          } catch (error) {
+            stopVoiceRecognition();
+            voiceButton.setAttribute('aria-pressed', 'false');
+            showToast('Voice assistance could not start. Please try again.');
+          }
+        });
+      });
+
+      window.addEventListener('pagehide', stopVoiceRecognition, { once: true });
+      window.addEventListener('beforeunload', stopVoiceRecognition, { once: true });
+    })();
+  </script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const mapsKey = params.get("mapsKey");
+
+      window.initYojanaSetuMap = function () {
+        if (typeof window.onGoogleMapsLoaded === 'function') {
+          window.onGoogleMapsLoaded();
+        }
+      };
+
+      if (mapsKey) {
+        const script = document.createElement("script");
+        script.src = "https://maps.googleapis.com/maps/api/js?key=" +
+          encodeURIComponent(mapsKey) +
+          "&loading=async&callback=initYojanaSetuMap";
+        script.async = true;
+        script.defer = true;
+        script.onerror = function () {
+          console.warn("Google Maps JavaScript API could not be loaded.");
+        };
+        document.head.appendChild(script);
+      } else {
+        console.warn("Google Maps browser key was not provided.");
+      }
+    })();
+  </script>
+</body>
+
+</html>

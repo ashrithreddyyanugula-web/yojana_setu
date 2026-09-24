@@ -1,0 +1,31 @@
+profile_id,age,gender,state,district,business_type,business_status,turnover,loan_amount,woman_entrepreneur,sc_st,rural,disability
+P001,24,Female,Telangana,Hyderabad,Food Processing,New,0,800000,Yes,No,No,No
+P002,31,Male,Telangana,Warangal,Manufacturing,New,0,1500000,No,Yes,Yes,No
+P003,28,Male,Telangana,Hyderabad,IT Services,Existing,1200000,500000,No,No,No,No
+P004,35,Female,Telangana,Nizamabad,Handicrafts,New,0,400000,Yes,Yes,Yes,No
+P005,40,Male,Telangana,Karimnagar,Coir,New,0,600000,No,No,Yes,No
+P006,29,Female,Telangana,Khammam,Garments,Existing,2500000,1000000,Yes,No,Yes,No
+P007,45,Male,Telangana,Hyderabad,Engineering,Existing,7000000,3000000,No,No,No,No
+P008,22,Female,Telangana,Nalgonda,Food Processing,New,0,300000,Yes,No,Yes,No
+P009,38,Male,Telangana,Adilabad,Tribal Handicrafts,New,0,500000,No,Yes,Yes,No
+P010,33,Female,Telangana,Sangareddy,Manufacturing,Existing,5000000,2000000,Yes,No,No,No
+P011,27,Male,Telangana,Medak,Agro Processing,New,0,1000000,No,No,Yes,No
+P012,42,Female,Telangana,Hyderabad,IT Services,Existing,9000000,1500000,Yes,No,No,No
+P013,30,Male,Telangana,Warangal,Textiles,Existing,3000000,1200000,No,Yes,Yes,No
+P014,26,Female,Telangana,Karimnagar,Beauty Services,New,0,250000,Yes,No,No,No
+P015,36,Male,Telangana,Nizamabad,Manufacturing,Existing,8000000,2500000,No,No,Yes,No
+P016,25,Female,Telangana,Hyderabad,Handloom,New,0,350000,Yes,No,Yes,No
+P017,48,Male,Telangana,Khammam,Food Processing,Existing,4000000,1800000,No,No,Yes,No
+P018,32,Female,Telangana,Adilabad,Village Industry,New,0,700000,Yes,Yes,Yes,No
+P019,39,Male,Telangana,Hyderabad,Software Services,Existing,10000000,3000000,No,No,No,No
+P020,23,Female,Telangana,Nalgonda,Handicrafts,New,0,200000,Yes,No,Yes,No
+P021,34,Male,Telangana,Medchal,Manufacturing,Existing,6000000,2000000,No,Yes,No,No
+P022,41,Female,Telangana,Siddipet,Khadi,Existing,3500000,900000,Yes,No,Yes,No
+P023,29,Male,Telangana,Hyderabad,Digital Services,New,0,600000,No,No,No,No
+P024,37,Female,Telangana,Warangal,Food Processing,Existing,4500000,1500000,Yes,Yes,Yes,No
+P025,44,Male,Telangana,Karimnagar,Machine Manufacturing,Existing,8500000,3500000,No,No,No,No
+P026,21,Female,Telangana,Nizamabad,Handicrafts,New,0,150000,Yes,Yes,Yes,No
+P027,52,Male,Telangana,Hyderabad,Manufacturing,Existing,9500000,4000000,No,No,No,No
+P028,30,Female,Telangana,Adilabad,Coir Products,New,0,450000,Yes,No,Yes,No
+P029,46,Male,Telangana,Sangareddy,Engineering,Existing,5000000,2200000,No,Yes,No,No
+P030,27,Female,Telangana,Khammam,Agro Industry,New,0,900000,Yes,No,Yes,No

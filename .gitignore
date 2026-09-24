@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+dist/
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+backend/atlas-credentials.env
+server/.env
+server/.env.*
