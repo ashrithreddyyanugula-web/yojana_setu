@@ -53,7 +53,9 @@ function SchemeResults({ profile, documentAnalysis, onDocumentAnalysisChange, on
             setSchemeError("");
 
             try {
-                const response = await fetch("http://localhost:5001/api/schemes");
+                const API_BASE_URL =
+                    import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
+                const response = await fetch(`${API_BASE_URL}/api/schemes`)
 
                 if (!response.ok) {
                     throw new Error(

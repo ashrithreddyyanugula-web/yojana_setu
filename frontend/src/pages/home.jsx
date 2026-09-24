@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-
+const API_BASE_URL =
+    import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
 const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL || "http://localhost:5001/api/chat";
 const COPILOT_PROFILE_STORAGE_KEY = "yojana-setu-copilot-profile";
 const DOCUMENT_STORAGE_KEY = "yojana-setu-home-documents";
@@ -322,7 +323,7 @@ function Home({ user, profileLocation, onLogin, onSignup, onOpenProfile, onLogou
 
     const findSchemes = async () => {
         if (!schemesRequestRef.current) {
-            schemesRequestRef.current = fetch("http://localhost:5001/api/schemes")
+            schemesRequestRef.current = fetch(`${API_BASE_URL}/api/schemes`)
                 .then(async (response) => {
                     if (!response.ok) throw new Error("Unable to load schemes");
                     const data = await response.json();
