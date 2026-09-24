@@ -29,7 +29,7 @@ let matcherPromise;
 
 const getMatcher = () => {
     if (!matcherPromise) {
-        const matcherPath = path.resolve(__dirname, "../../src/utils/schemeMatcher.js");
+        const matcherPath = path.resolve(__dirname, "../utils/schemeMatcher.js");
         const matcherSource = fs
             .readFileSync(matcherPath, "utf8")
             .replace("export function matchSchemes", "function matchSchemes");
