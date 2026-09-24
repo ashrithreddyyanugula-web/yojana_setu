@@ -8,7 +8,7 @@ require("dotenv").config({ path: path.resolve(__dirname, ".env") });
 const authRoutes = require("./routes/auth");
 const partnerRoutes = require("./routes/partners");
 const copilotRoutes = require("./routes/copilot");
-
+const schemeMatchRoutes = require("./routes/schemeMatch");
 const app = express();
 
 const allowedOrigins = [
@@ -37,11 +37,12 @@ app.get("/", (req, res) => {
         service: "Yojana Setu API"
     });
 });
-
+app.use("/api/schemes/match", schemeMatchRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/schemes", schemesRoutes);
 app.use("/api/partners", partnerRoutes);
 app.use("/api/chat", copilotRoutes);
+
 
 app.get("/api/health", (req, res) => res.json({ ok: true, service: "Yojana Setu API" }));
 
