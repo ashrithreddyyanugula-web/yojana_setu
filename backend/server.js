@@ -30,6 +30,14 @@ app.use(cors({
 }));
 app.use(express.json({ limit: "100kb" }));
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        status: "ok",
+        message: "Yojana Setu backend is running",
+        service: "Yojana Setu API"
+    });
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/schemes", schemesRoutes);
 app.use("/api/partners", partnerRoutes);
