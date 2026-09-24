@@ -29,13 +29,8 @@ let matcherPromise;
 
 const getMatcher = () => {
     if (!matcherPromise) {
-        const matcherPath = path.resolve(__dirname, "../utils/schemeMatcher.js");
-        const matcherSource = fs
-            .readFileSync(matcherPath, "utf8")
-            .replace("export function matchSchemes", "function matchSchemes");
-        const moduleSource = `${matcherSource}\nexport { matchSchemes };`;
-        const moduleUrl = `data:text/javascript;base64,${Buffer.from(moduleSource).toString("base64")}`;
-        matcherPromise = import(moduleUrl).then((module) => module.matchSchemes);
+        const { matchSchemes } = require("../utils/schemeMatcher.js");
+        matcherPromise = Promise.resolve(matchSchemes);
     }
 
     return matcherPromise;
