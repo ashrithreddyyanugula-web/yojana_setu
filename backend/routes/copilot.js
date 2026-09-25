@@ -151,7 +151,44 @@ const extractDeterministicProfile = (message, conversation = []) => {
 
     return extracted;
 };
+function enrichProfile(profile = {}, message = "") {
+    const text = String(message).toLowerCase();
 
+    const enriched = { ...profile };
+
+    // Business type detection
+    if (
+        !enriched.businessType &&
+        /(tailoring|tailor|boutique|garment|clothing|apparel|stitching)/i.test(text)
+    ) {
+        enriched.businessType = "Textile";
+    }
+
+    // New business detection
+    if (
+        !enriched.businessStatus &&
+        /(start|new business|new enterprise|new venture|begin|opening)/i.test(text)
+    ) {
+        enriched.businessStatus = "new";
+    }
+
+    // Varanasi -> Uttar Pradesh
+    if (
+        !enriched.state &&
+        /(varanasi|banaras|kashi)/i.test(text)
+    ) {
+        enriched.state = "Uttar Pradesh";
+    }
+
+    if (
+        !enriched.district &&
+        /(varanasi|banaras|kashi)/i.test(text)
+    ) {
+        enriched.district = "Varanasi";
+    }
+
+    return enriched;
+}
 const extractProfile = async (client, message, profile, language, conversation) => {
     const content = await generateGeminiContent(client, {
         config: {
