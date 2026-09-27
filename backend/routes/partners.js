@@ -81,10 +81,23 @@ const fetchPlaces = async (url, body) => {
         });
 
         const data = await response.json().catch(() => ({}));
+
         if (!response.ok) {
-            const googleMessage = data.error?.message || "Google Places request failed.";
-            const error = new Error(googleMessage);
+            console.error("GOOGLE PLACES RAW ERROR:", {
+                status: response.status,
+                statusText: response.statusText,
+                data,
+            });
+
+            const error = new Error(
+                data?.error?.message || "Google Places request failed."
+            );
+
             error.statusCode = response.status >= 500 ? 502 : 400;
+            error.googleStatus = data?.error?.status || null;
+            error.googleCode = data?.error?.code || response.status;
+            error.googleDetails = data?.error || data;
+
             throw error;
         }
 
@@ -209,14 +222,25 @@ router.get("/nearby", async (req, res) => {
         });
     } catch (error) {
         if (error.name === "AbortError") {
-            return res.status(504).json({ error: "Partner search timed out. Please try again." });
+            return res.status(504).json({
+                error: "Partner search timed out. Please try again.",
+            });
         }
 
-        console.error("Partner search failed:", error.message);
+        console.error("Partner search failed:", {
+            message: error.message,
+            statusCode: error.statusCode,
+            googleStatus: error.googleStatus,
+            googleCode: error.googleCode,
+            googleDetails: error.googleDetails,
+        });
+
         return res.status(error.statusCode || 502).json({
-            error: error.statusCode
-                ? "The partner search provider rejected the request. Verify the Places API is enabled, billing is active, and GOOGLE_MAPS_API_KEY restrictions allow this backend."
-                : "Nearby assistance is temporarily unavailable. Please try again later.",
+            success: false,
+            error: error.message || "Nearby assistance is temporarily unavailable.",
+            googleStatus: error.googleStatus || null,
+            googleCode: error.googleCode || null,
+            googleDetails: error.googleDetails || null,
         });
     }
 });
