@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DocumentIntelligence from "../components/DocumentIntelligence";
 import { matchSchemes } from "../utils/schemeMatcher";
+import { VITE_API_URL } from "../utils/apiConfig";
 
 const statusLabels = {
     eligible: {
@@ -53,9 +54,7 @@ function SchemeResults({ profile, documentAnalysis, onDocumentAnalysisChange, on
             setSchemeError("");
 
             try {
-                const API_BASE_URL =
-                    import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
-                const response = await fetch(`${API_BASE_URL}/api/schemes`)
+                const response = await fetch(`${VITE_API_URL}/api/schemes`)
 
                 if (!response.ok) {
                     throw new Error(

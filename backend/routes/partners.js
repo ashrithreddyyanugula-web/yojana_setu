@@ -214,7 +214,9 @@ router.get("/nearby", async (req, res) => {
 
         console.error("Partner search failed:", error.message);
         return res.status(error.statusCode || 502).json({
-            error: "Unable to retrieve partner locations right now.",
+            error: error.statusCode
+                ? "The partner search provider rejected the request. Verify the Places API is enabled, billing is active, and GOOGLE_MAPS_API_KEY restrictions allow this backend."
+                : "Nearby assistance is temporarily unavailable. Please try again later.",
         });
     }
 });

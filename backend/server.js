@@ -12,13 +12,14 @@ const schemeMatchRoutes = require("./routes/schemeMatch");
 const app = express();
 
 const allowedOrigins = [
+    "https://yojanasetu-beryl.vercel.app",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:5174",
     process.env.FRONTEND_URL
 ].filter(Boolean);
 
-app.use(cors({
+const corsOptions = {
     origin: (origin, callback) => {
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
@@ -26,8 +27,13 @@ app.use(cors({
             callback(new Error("Not allowed by CORS"));
         }
     },
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
-}));
+};
+
+app.use(cors(corsOptions));
+app.options(/.*/, cors(corsOptions));
 app.use(express.json({ limit: "100kb" }));
 
 app.get("/", (req, res) => {

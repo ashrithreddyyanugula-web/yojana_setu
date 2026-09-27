@@ -7,8 +7,8 @@ import Profile from "./pages/Profile";
 import SchemeResults from "./pages/SchemeResults";
 import SchemeDetails from "./pages/SchemeDetails";
 import { matchSchemes } from "./utils/schemeMatcher";
+import { API_BASE_URL } from "./utils/apiConfig";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || "";
 const HAS_VALID_GOOGLE_CLIENT_ID = Boolean(GOOGLE_CLIENT_ID)
     && GOOGLE_CLIENT_ID.trim().length > 0

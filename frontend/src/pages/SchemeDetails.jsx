@@ -2,7 +2,10 @@ import { useEffect, useMemo, useState } from "react";
 import { getReadinessItems } from "../utils/applicationReadiness";
 import { getRoadmapConfig } from "../utils/applicationRoadmap";
 import { calculateEMI } from "../utils/emiCalculator";
+import { API_BASE_URL } from "../utils/apiConfig";
 
+const API_BASE_URL =
+    import.meta.env.VITE_API_URL || "http://localhost:5001";
 const statusLabels = {
     eligible: {
         label: "Likely Eligible",
@@ -29,8 +32,6 @@ const currencyFormatter = new Intl.NumberFormat("en-IN", {
     currency: "INR",
     maximumFractionDigits: 0,
 });
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
-
 function SchemeDetails({ scheme, profile, documentAnalysis, loanAmount, onBack }) {
     const initialLoanAmount = Number(loanAmount) > 0 ? String(loanAmount) : "";
     const [calculatorInputs, setCalculatorInputs] = useState({
@@ -165,22 +166,13 @@ function SchemeDetails({ scheme, profile, documentAnalysis, loanAmount, onBack }
         });
 
         navigator.geolocation.getCurrentPosition(async ({ coords }) => {
+            const latitude = coords.latitude;
+            const longitude = coords.longitude;
             const coordinates = {
-                latitude: coords.latitude,
-                longitude: coords.longitude,
+                latitude,
+                longitude,
             };
-            const params = new URLSearchParams({
-                lat: String(coordinates.latitude),
-                lng: String(coordinates.longitude),
-                schemeId: scheme.id || "",
-                schemeName: scheme.name || "",
-            });
-            const requestUrl = `${API_BASE_URL}/api/partners/nearby?${params.toString()}`;
-
-            console.log("Selected scheme:", scheme);
-            console.log("Latitude:", coordinates.latitude);
-            console.log("Longitude:", coordinates.longitude);
-            console.log("Request URL:", requestUrl);
+            const requestUrl = `${API_BASE_URL}/api/partners/nearby?lat=${latitude}&lng=${longitude}&schemeId=${encodeURIComponent(scheme.id || "")}`;
 
             try {
                 const response = await fetch(requestUrl);
@@ -199,14 +191,16 @@ function SchemeDetails({ scheme, profile, documentAnalysis, loanAmount, onBack }
             } catch (error) {
                 setAssistanceState({
                     status: "error",
-                    message: `API request failed: ${error.message || "Unable to load nearby assistance. Please try again."}`,
+                    message: error instanceof TypeError
+                        ? "Unable to reach the assistance service. Please check your connection and try again."
+                        : error.message || "Nearby assistance is temporarily unavailable. Please try again.",
                     places: [],
                     coordinates,
                 });
             }
         }, (error) => {
             const message = error.code === 1
-                ? "Location access is required to find nearby assistance."
+                ? "Location permission is required to find assistance near you."
                 : "Your location is unavailable. Please check browser location settings and try again.";
             setAssistanceState({
                 status: "error",
@@ -1159,10 +1153,11 @@ function SchemeDetails({ scheme, profile, documentAnalysis, loanAmount, onBack }
                             type="button"
                             className="ys-assistance-btn"
                             onClick={handleAssistanceClick}
+                            disabled={assistanceState.status === "loading"}
                             data-scheme-id={scheme.id || ""}
                             data-scheme-name={scheme.name || ""}
                         >
-                            Find Assistance Near Me
+                            {assistanceState.status === "loading" ? "Searching..." : "Find Assistance Near Me"}
                         </button>
                         {assistanceState.status !== "idle" ? (
                             <p className="ys-assistance-status" role="status" aria-live="polite">
